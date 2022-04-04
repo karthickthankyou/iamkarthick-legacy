@@ -6,6 +6,10 @@ import { useAppDispatch, useAppSelector } from 'src/store'
 import { selectCount } from 'src/store/counter'
 import { increment, setCounterState } from 'src/store/counter/counterSlice'
 import { NextSeo } from 'next-seo'
+import Hero from 'src/components/organisms/Hero'
+import SkillCard from 'src/components/organisms/SkillCard'
+import Container from 'src/components/atoms/Container/Container'
+import HR from 'src/components/molecules/HR/HR'
 
 export const getStaticProps: GetStaticProps = async () => ({
   props: { data: ['Karthick', 'Ragavendran'] }, // will be passed to the page component as props
@@ -30,46 +34,134 @@ const Home: NextPage = ({
       </Head>
 
       <NextSeo
-        title='Next boilerplate.'
+        title='Karthick Ragavendran | Portfolio.'
         description='A short description goes here which says what goes here.'
       />
-      <div>
-        {text}
-        <div className='flex gap-4 mt-2'>
-          {/** @ts-ignore */}
-          <button type='button' onClick={() => setText(obj)}>
-            Break things
-          </button>
-        </div>
-      </div>
-      <div>
-        {JSON.stringify(count)}
-        <div className='flex gap-4 mt-2'>
-          <button
-            className='px-2 py-1 border rounded-sm'
-            type='button'
-            onClick={() => dispatch(setCounterState(8))}
-          >
-            Reset count
-          </button>
-          <button
-            className='px-2 py-1 border rounded-sm'
-            type='button'
-            onClick={() => dispatch(increment())}
-          >
-            Inc{' '}
-          </button>
-        </div>
-      </div>
 
       <main>
-        <Link
-          prefetch={false}
-          className='hover:underline underline-offset-2'
-          href='/sample'
-        >
-          <a>To sample page &gt; </a>
-        </Link>
+        <Container>
+          <Hero />
+          <div className='group'>
+            <div className='tracking-widest uppercase transition-all translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 text-primary'>
+              Basic Skills
+            </div>
+
+            <div className='w-full gap-4 space-y-4 columns-1 md:columns-2 lg:columns-3'>
+              <SkillCard title='Javascript' experience={4}>
+                <p>
+                  I am fond of functional javascript. I believe that if the
+                  application is made with pure functions it become super easy
+                  to work with and evolve.
+                </p>
+
+                <div>
+                  <Link
+                    href='https://javascript.plainenglish.io/javascript-currying-practical-example-512cf1099e81'
+                    className='w-4 h-4 bg-black rounded-full'
+                  >
+                    {'a '}
+                  </Link>
+                </div>
+              </SkillCard>
+
+              <SkillCard title='CSS' experience={4}>
+                <p>
+                  I am a big fan of utility first CSS. With tailwind, I can
+                  develop UI at the speed of writing.
+                </p>
+
+                <div>
+                  <Link
+                    href='https://javascript.plainenglish.io/javascript-currying-practical-example-512cf1099e81'
+                    className='w-4 h-4 bg-black rounded-full'
+                  >
+                    {'a '}
+                  </Link>
+                </div>
+              </SkillCard>
+              <SkillCard title='HTML' experience={4}>
+                <p>
+                  I am fond of functional javascript. I believe that if the
+                  application is made with pure functions it become super easy
+                  to work with and evolve.
+                </p>
+
+                <div>
+                  <Link
+                    href='https://javascript.plainenglish.io/javascript-currying-practical-example-512cf1099e81'
+                    className='w-4 h-4 bg-black rounded-full'
+                  >
+                    {'a '}
+                  </Link>
+                </div>
+              </SkillCard>
+              <SkillCard title='React' experience={3.5}>
+                <p>
+                  I started web development with react in 2018. So my brain
+                  works in a data-driven way by default.
+                </p>
+                <p>
+                  My favorite thing about react is composability. A lot of
+                  components I create are composable like mixing and matching
+                  the lego pieces.
+                </p>
+              </SkillCard>
+
+              <SkillCard title='Redux' experience={3.5}>
+                <p>
+                  I started web development with react. So my brain works in a
+                  data-driven way by default.
+                </p>
+              </SkillCard>
+              <SkillCard title='Design System' experience={2}>
+                <p>
+                  Anything that comprises an application should look like they
+                  belong together. I have an eye to immediately detect
+                  inconsistent UI.
+                </p>
+              </SkillCard>
+              <SkillCard title='UX' experience={2}>
+                <p>
+                  I have worked with companies that do not have a dedicated UX
+                  designer.
+                </p>
+                <p>
+                  Following the basic rules of UX, I can design (and develop)
+                  consistent looking UI that provide smoother user experience.
+                </p>
+              </SkillCard>
+
+              <SkillCard title='Storybook' experience={2}>
+                <p>
+                  Storybook drastically changed the way I think about UI. It
+                </p>
+              </SkillCard>
+
+              <SkillCard
+                title='Tailwind'
+                description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic numquam quaerat fugiat!'
+              />
+
+              <SkillCard
+                title='React hook form'
+                description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic numquam quaerat fugiat!'
+              />
+
+              <SkillCard
+                title='Typescript'
+                description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic numquam quaerat fugiat!'
+              />
+              <SkillCard
+                title='Eslint'
+                description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic numquam quaerat fugiat!'
+              />
+              <SkillCard
+                title='Cypress'
+                description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic numquam quaerat fugiat!'
+              />
+            </div>
+          </div>
+        </Container>
       </main>
 
       <footer className='mt-16 text-gray-500'>Next boilerplate</footer>

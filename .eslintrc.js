@@ -4,6 +4,10 @@ module.exports = {
     es2021: true,
     jest: true,
   },
+  globals: {
+    React: true,
+    JSX: true,
+  },
   extends: [
     'plugin:react/recommended',
     'airbnb',
