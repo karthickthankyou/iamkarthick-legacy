@@ -21,6 +21,9 @@ const moduleExports = withPWA({
     buildExcludes: [/middleware-manifest.json$/],
     maximumFileSizeToCacheInBytes: 3000000,
   },
+  images: {
+    domains: ['via.placeholder.com', 'res.cloudinary.com'],
+  },
 })
 
 const sentryWebpackPluginOptions = {

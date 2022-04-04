@@ -97,3 +97,13 @@ export default function useTriggerOnScroll(): [
   }, [ref, triggered])
   return [triggered, ref]
 }
+
+export const useScrollTo = () => {
+  const interactiveMapRef = useRef<HTMLDivElement | null>(null)
+
+  const executeScroll = () =>
+    interactiveMapRef.current?.scrollIntoView({
+      behavior: 'smooth',
+    })
+  return [interactiveMapRef, executeScroll] as const
+}
