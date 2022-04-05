@@ -12,13 +12,15 @@ export interface IBannerPointsProps {
 export const Point = ({
   title,
   children,
+  className,
 }: {
   title: string
   children: Children
+  className?: string
 }) => (
-  <div className='max-w-md space-y-1'>
-    <div className='text-xl font-bold '>{title}</div>
-    <div className=''>{children}</div>
+  <div className={`max-w-md space-y-1 ${className}`}>
+    <div className='text-2xl font-bold '>{title}</div>
+    <div className='mt-3 text-lg'>{children}</div>
   </div>
 )
 export const BulletPoint = ({ description }: { description: string }) => (

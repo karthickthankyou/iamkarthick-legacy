@@ -112,86 +112,102 @@ const Home: NextPage = ({
             description='Recipe for elegant UI.'
             ref={elegantUiRef}
           >
-            <Point title='Design system'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
-            <Point title='Isolated component development & testing'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
-            <Point title='Composition'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
-            <Point title='Atomic design'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
-            <Point title='Styling abstraction using components'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
-            <Point title='UX foundations'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
+            <div className='mt-4 overflow-x-scroll overscroll-x-none thin-scrollbar first-letter:text-4xl'>
+              <div
+                className='gap-8 pb-12 space-y-4 text-lg h-screen60'
+                style={{ columnWidth: '16rem', columnFill: 'auto' }}
+              >
+                <Point title='Design system'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+
+                <Point title='Isolated component development & testing'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+                <Point title='Composition'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+                <Point title='Atomic design'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+                <Point title='Styling abstraction using components'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+                <Point title='UX foundations'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+              </div>
+            </div>
           </BannerPoints>
           <BannerPoints
             title='Robust architecture'
             description='Recipe for robust architecture.'
             ref={robustArchRef}
           >
-            <Point title='Functional programming'>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-                in quo consectetur, sit at,
-              </p>
-              <p>
-                Aiores minus nam impedit nesciunt magni quaerat, sed asperiores!
-              </p>
-            </Point>
-            <Point title='Redux'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
-            <Point title='Observables'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
-            <Point title='Typescript'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
-            <Point title='Tests that mimic the user'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
-            <Point title='Visual Regression'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
-            <Point title='Caching'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
-            <Point title='Git hooks & CI/CD'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              in quo consectetur, sit at, maiores minus nam impedit nesciunt
-              magni quaerat, sed asperiores!
-            </Point>
+            <div className='mt-4 overflow-x-scroll overscroll-x-none thin-scrollbar first-letter:text-4xl'>
+              <div
+                className='gap-8 pb-12 space-y-4 text-lg h-screen60'
+                style={{ columnWidth: '16rem', columnFill: 'auto' }}
+              >
+                <Point title='Functional programming'>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Maxime in quo consectetur, sit at,
+                  </p>
+                  <p>
+                    Aiores minus nam impedit nesciunt magni quaerat, sed
+                    asperiores!
+                  </p>
+                </Point>
+                <Point title='Redux'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+                <Point title='Observables'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+                <Point title='Typescript'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+                <Point title='Tests that mimic the user'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+                <Point title='Visual Regression'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+                <Point title='Caching'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+                <Point title='Git hooks & CI/CD'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Maxime in quo consectetur, sit at, maiores minus nam impedit
+                  nesciunt magni quaerat, sed asperiores!
+                </Point>
+              </div>
+            </div>
           </BannerPoints>
 
           <div className='group' ref={stackRef}>
