@@ -5,10 +5,14 @@ import BlurredCirle from 'src/components/molecules/BlurredCirle/BlurredCirle'
 import BlurredTriangle from 'src/components/molecules/BlurredTriangle/BlurredTriangle'
 import OverlapSpace from 'src/components/molecules/OverlapSpace/OverlapSpace'
 import Image from 'src/components/atoms/Image'
+import Links from '../Links'
 
-export interface IHeroProps {}
+export interface IHeroProps {
+  scrollToElegantUi: () => void
+  scrollToRobustArch: () => void
+}
 
-const Hero = () => {
+const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
   const [showWave, setshowWave] = useState(true)
   return (
     <OverlapSpace className='h-screen overflow-hidden'>
@@ -23,7 +27,6 @@ const Hero = () => {
       </OverlapSpace.Child>
       <OverlapSpace.Child className='flex flex-col items-start justify-center gap-6 sm:flex-row sm:justify-start sm:items-center'>
         <div className='relative sm:h-full h-72 w-72'>
-          <div className='absolute w-full h-full translate-x-3 translate-y-3 shadow-inner bg-black/10 -z-10' />
           <img
             alt='Karthick Ragavendran'
             width={256}
@@ -33,13 +36,29 @@ const Hero = () => {
           />
         </div>
         <div className='max-w-md'>
-          <div className='inline-block text-5xl font-black tracking-tight md:text-7xl bg-white-transparent'>
-            Hello, <br /> I&apos; m{' '}
-            <span className='text-primary'>Karthick</span> Ragavendran
+          <div className='inline-block text-5xl font-black tracking-tight text-luxury md:text-7xl bg-white-transparent'>
+            Hello, <br /> I&apos; m <span className=''>Karthick</span>{' '}
+            Ragavendran
           </div>
+          <Links />
           <div className='mt-2 bg-white-transparent'>
-            I create React applications with <strong>elegant UI</strong> and{' '}
-            <strong>robust architecture</strong>.
+            I create React applications with{' '}
+            <button
+              type='button'
+              className='font-medium underline underline-offset-4 text-primary'
+              onClick={() => scrollToElegantUi()}
+            >
+              <strong>elegant UI</strong>
+            </button>{' '}
+            and{' '}
+            <button
+              className='font-medium underline underline-offset-4 text-primary'
+              type='button'
+              onClick={() => scrollToRobustArch()}
+            >
+              <strong>robust architecture</strong>
+            </button>
+            .
           </div>
         </div>
       </OverlapSpace.Child>
@@ -50,8 +69,39 @@ const Hero = () => {
       >
         <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
           <BlurredCirle
-            className='stroke-0.5 stroke-primary fill-primary animate-pulse'
-            radius={30}
+            className='stroke animate-breathe-20 stroke-black fill-transparent '
+            radius={1200}
+          />
+        </div>
+        <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
+          <BlurredCirle
+            className='stroke stroke-black fill-transparent animate-breathe-30 '
+            radius={1000}
+          />
+        </div>
+        <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
+          <BlurredCirle
+            className='stroke stroke-primary-800 animate-breathe-40 fill-transparent -z-30'
+            radius={800}
+          />
+        </div>
+        <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
+          <BlurredCirle
+            className='stroke stroke-primary-900 animate-breathe-50 fill-transparent -z-20'
+            radius={600}
+          />
+        </div>
+        <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
+          <BlurredCirle
+            className='stroke stroke-primary-700 fill-transparent animate-breathe-60 -z-10'
+            radius={400}
+          />
+        </div>
+
+        <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
+          <BlurredCirle
+            className='stroke stroke-primary-600 fill-transparent animate-breathe-70'
+            radius={200}
           />
         </div>
         <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
@@ -62,39 +112,8 @@ const Hero = () => {
         </div>
         <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
           <BlurredCirle
-            className='stroke stroke-primary-600 fill-transparent animate-breathe-70'
-            radius={200}
-          />
-        </div>
-        <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
-          <BlurredCirle
-            className='stroke stroke-primary-700 fill-transparent animate-breathe-60'
-            radius={400}
-          />
-        </div>
-        <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
-          <BlurredCirle
-            className='stroke stroke-primary-900 animate-breathe-50 fill-transparent '
-            radius={600}
-          />
-        </div>
-        <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
-          <BlurredCirle
-            className='stroke stroke-primary-800 animate-breathe-40 fill-transparent'
-            radius={800}
-          />
-        </div>
-
-        <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
-          <BlurredCirle
-            className='stroke stroke-black fill-transparent animate-breathe-30'
-            radius={1000}
-          />
-        </div>
-        <div className='absolute translate-x-1/2 -translate-y-1/2 top-full right-1/2'>
-          <BlurredCirle
-            className='stroke animate-breathe-20 stroke-black fill-transparent'
-            radius={1200}
+            className='stroke-0.5 stroke-primary fill-transparent animate-pulse'
+            radius={30}
           />
         </div>
       </OverlapSpace.Child>

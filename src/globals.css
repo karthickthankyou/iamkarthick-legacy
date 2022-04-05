@@ -69,16 +69,32 @@ a {
     @apply text-white bg-primary-500;
   }
   .text-luxury {
-    @apply text-gradient bg-gradient-to-tr via-black to-primary-600 from-primary-400;
+    @apply text-gradient bg-gradient-to-tr via-black to-black from-primary;
   }
   .text-luxury-white {
     @apply text-gradient bg-gradient-to-tr via-white to-primary-300 from-white;
   }
   .bg-luxury {
-    @apply text-white transition-all bg-gradient-to-tr via-primary-500 to-primary-600 from-primary-400 hover:bg-primary-600;
+    @apply text-white transition-all bg-gradient-to-tr via-black to-black from-primary;
   }
 
   .bg-white-transparent {
-    @apply py-2 pr-2 bg-white/90;
+    @apply inline-block py-2 pr-2 bg-white/90;
   }
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  @apply w-1 h-0.5;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+  @apply bg-black/10;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  @apply w-1 h-1 rounded-full bg-black/60;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

@@ -95,6 +95,11 @@ module.exports = {
       accent: primaryPallete.DEFAULT,
     },
     extend: {
+      height: {
+        screen50: '50vh',
+        screen80: '80vh',
+        screen90: '90vh',
+      },
       strokeWidth: {
         3: '3px',
         4: '4px',
@@ -227,6 +232,7 @@ module.exports = {
           'inset 8px 0px 2px rgba(0, 0, 0, 0.3), inset -8px 0px 2px rgba(0, 0, 0, 0.3)',
       },
       zIndex: {
+        '-60': '-60',
         '-50': '-50',
         '-40': '-40',
         '-30': '-30',

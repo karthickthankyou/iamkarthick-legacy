@@ -1,17 +1,34 @@
+import HR from 'src/components/molecules/HR/HR'
 import { Children } from 'src/types'
 
 export interface ISkillCardProps {
   title: string
-  experience: number
+  experience?: number
   children: Children
+  type?: 'title' | 'subtitle'
 }
 
-const SkillCard = ({ title, children, experience }: ISkillCardProps) => (
-  <div>
-    <div className='inline-block text-4xl font-black bg-white-transparent'>
-      {title}
+const SkillCard = ({
+  title,
+  children,
+  experience,
+  type = 'subtitle',
+}: ISkillCardProps) => (
+  <div className={`${type === 'title' && 'break-before-column'}`}>
+    <div className='bg-white-transparent'>
+      <div
+        className={`inline-block ${
+          type === 'title' && 'text-5xl text-luxury'
+        } ${type === 'subtitle' && 'text-2xl'} font-black bg-white-transparent`}
+      >
+        {title}
+      </div>
     </div>
-    <div className='bg-white-transparent'>{experience} years</div>
+    {experience && (
+      <div className='bg-white-transparent'>
+        {experience} {experience === 1 ? 'year' : 'years'}
+      </div>
+    )}
     <div className='space-y-4 text-lg bg-white-transparent'>{children}</div>
   </div>
 )
