@@ -7,7 +7,7 @@ export const Motto = () => (
       </em>
       .
     </div>
-    <div className='mt-4 overflow-x-scroll thin-scrollbar first-letter:text-4xl'>
+    <div className='mt-4 overflow-x-scroll overscroll-x-none thin-scrollbar first-letter:text-4xl'>
       <div
         className='gap-8 pb-12 space-y-4 text-lg text-justify h-screen60'
         style={{ columnWidth: '16rem' }}

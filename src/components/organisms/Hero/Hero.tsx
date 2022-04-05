@@ -18,6 +18,17 @@ const Ring = ({ className, radius }: { className: string; radius: number }) => (
     <BlurredCirle className={` ${className}`} radius={radius} />
   </div>
 )
+const RingR = ({
+  className,
+  radius,
+}: {
+  className: string
+  radius: number
+}) => (
+  <div className='absolute -translate-x-1/2 -translate-y-1/2 -z-20 right-full top-1/2 '>
+    <BlurredCirle className={` ${className}`} radius={radius} />
+  </div>
+)
 const RingBL = ({
   className,
   radius,
@@ -73,18 +84,18 @@ const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
             Ragavendran
           </div>
           <Links />
-          <div className='mt-2 '>
+          <div className='max-w-md mt-6 text-lg'>
             I create React applications with{' '}
             <button
               type='button'
-              className='font-medium underline underline-offset-4 text-primary'
+              className='font-medium underline underline-offset-4 '
               onClick={() => scrollToElegantUi()}
             >
               <strong>elegant UI</strong>
             </button>{' '}
             and{' '}
             <button
-              className='font-medium underline underline-offset-4 text-primary'
+              className='font-medium underline underline-offset-4 '
               type='button'
               onClick={() => scrollToRobustArch()}
             >
@@ -102,31 +113,31 @@ const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
       >
         <div className='container fixed top-0 w-full h-full mx-auto overflow-hidden '>
           <Ring
-            className='stroke-10 animate-breathe-20 stroke-white/10 fill-transparent '
+            className='stroke-10 animate-breathe-20 stroke-white fill-transparent '
             radius={1200}
           />
           <Ring
-            className='stroke-10 stroke-white/20 fill-transparent animate-breathe-30 '
+            className='stroke-10 stroke-white fill-transparent animate-breathe-30 '
             radius={1000}
           />
           <Ring
-            className='stroke-10 stroke-white/30 animate-breathe-40 fill-transparent -z-30'
+            className='stroke-10 stroke-white animate-breathe-40 fill-transparent -z-30'
             radius={800}
           />
           <Ring
-            className='stroke-10 stroke-white/40 animate-breathe-50 fill-transparent -z-20'
+            className='stroke-10 stroke-white animate-breathe-50 fill-transparent -z-20'
             radius={600}
           />
           <Ring
-            className='stroke-10 stroke-white/50 animate-breathe-60 fill-transparent -z-20'
+            className='stroke-10 stroke-white animate-breathe-60 fill-transparent -z-20'
             radius={400}
           />
           <Ring
-            className='stroke-10 stroke-white/60 animate-breathe-70 fill-transparent -z-20'
+            className='stroke-10 stroke-white animate-breathe-70 fill-transparent -z-20'
             radius={200}
           />
           <Ring
-            className='stroke-10 stroke-white/70 animate-breathe-80 fill-transparent -z-20'
+            className='stroke-10 stroke-white animate-breathe-80 fill-transparent -z-20'
             radius={100}
           />
           <Ring className=' fill-white -z-20' radius={40} />

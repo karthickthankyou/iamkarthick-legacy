@@ -21,7 +21,7 @@ const ProductCard = React.forwardRef<HTMLDivElement, IProductCardProps>(
         <div className='flex justify-end mb-3'>
           <SlideIndicator direction='left' />
         </div>
-        <div className='flex h-full gap-2 pb-3 overflow-x-scroll -skew-x-3 bg-white thin-scrollbar snap-proximity'>
+        <div className='flex h-full gap-2 pb-3 overflow-x-scroll -skew-x-3 bg-white overscroll-x-none thin-scrollbar snap-proximity'>
           <div className='relative flex-shrink-0'>
             <img
               src='https://res.cloudinary.com/thankyou/image/upload/v1649076995/iamkarthick/46aP2QbqUqBqpx5c7Zikd2HFMqywJNqDeZVr22vYLLq3mmDMvC912rHdNBhAedaBaUAW5aF7NFVhWLBXM7zWakKcqK41_vb0mox.gif'
@@ -55,18 +55,18 @@ const ProductCard = React.forwardRef<HTMLDivElement, IProductCardProps>(
         </div>
       </div>
       <div className='-skew-x-3'>
-        <div className='inline-block mt-2 text-5xl font-black  '>{title}</div>
-        <p className=' '>
+        <div className='inline-block mt-2 text-5xl font-black '>{title}</div>
+        <p className='mt-6'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
           quibusdam ducimus corporis, architecto quasi dolorem quidem,
           repellendus non animi eos maiores nesciunt quae deleniti!
         </p>
-        <p className=' '>
+        <p className=''>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
           quibusdam ducimus corporis, architecto quasi dolorem quidem,
           repellendus non animi eos maiores nesciunt quae deleniti!
         </p>
-        <div className='mt-1  '>{children}</div>
+        <div className='mt-1 '>{children}</div>
       </div>
     </div>
   ),

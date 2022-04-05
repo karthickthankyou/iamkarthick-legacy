@@ -20,9 +20,9 @@ const SkillCard = ({
     {type === 'title' && (
       <div className={`${type === 'title' && 'break-before-column'}`} />
     )}
-    {/*  className='break-inside-avoid' */}
+
     <div>
-      <div className='  '>
+      <div className='flex items-baseline gap-3'>
         <div
           className={`inline-block ${
             type === 'title' && 'text-5xl text-luxury'
@@ -30,13 +30,13 @@ const SkillCard = ({
         >
           {title}
         </div>
+        {experience && (
+          <div className='inline-block'>
+            {experience} {experience === 1 ? 'year' : 'years'}
+          </div>
+        )}
       </div>
-      {experience && (
-        <div className=' '>
-          {experience} {experience === 1 ? 'year' : 'years'}
-        </div>
-      )}
-      <div className='space-y-4 text-lg  '>{children}</div>
+      <div className='mt-4 space-y-4 text-lg'>{children}</div>
     </div>
   </>
 )

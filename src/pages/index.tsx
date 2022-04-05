@@ -62,37 +62,37 @@ const Home: NextPage = ({
         description='A short description goes here which says what goes here.'
       />
 
-      <div className='fixed right-0 z-30 flex items-center justify-end h-screen '>
-        <div className='flex flex-col gap-3 px-2 py-3 bg-white'>
+      <div className='fixed right-0 z-30 -translate-y-1/2 border-2 border-white bg-white/20 hover:bg-white/80 top-1/2 group '>
+        <div className='flex flex-col gap-3 px-2 py-3 transition-opacity bg-white opacity-0 group-hover:opacity-100'>
           {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
           <button
             type='button'
             aria-label='gotoHero'
-            className='w-4 h-4 p-2 transition-all bg-black border-2 border-black rounded-full hover:scale-150'
+            className='w-3 h-3 p-2 transition-all bg-black border-2 border-black rounded-full hover:scale-150'
             onClick={gotoHero}
           />
           <button
             type='button'
             aria-label='goto stack'
-            className='w-4 h-4 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
+            className='w-3 h-3 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
             onClick={gotoStack}
           />
           <button
             type='button'
             aria-label='goto ikea clone project'
-            className='w-4 h-4 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
+            className='w-3 h-3 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
             onClick={gotoIkea}
           />
           <button
             type='button'
             aria-label='goto epic clone project'
-            className='w-4 h-4 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
+            className='w-3 h-3 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
             onClick={gotoEpic}
           />
           <button
             type='button'
             aria-label='goto zillow clone project'
-            className='w-4 h-4 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
+            className='w-3 h-3 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
             onClick={gotoZillow}
           />
         </div>
@@ -201,7 +201,7 @@ const Home: NextPage = ({
             <div className='flex justify-end'>
               <SlideIndicator direction='left' />
             </div>
-            <div className='h-full overflow-x-scroll thin-scrollbar'>
+            <div className='h-full overflow-x-scroll overscroll-x-none thin-scrollbar'>
               <div
                 className='gap-4 space-y-4 h-screen80'
                 style={{ columnWidth: '24rem' }}
@@ -270,6 +270,12 @@ const Home: NextPage = ({
                     My favorite thing about react is composability. A lot of
                     components I create are composable like mixing and matching
                     the lego pieces.
+                  </p>
+                </SkillCard>
+                <SkillCard title='Next JS' experience={1}>
+                  <p>
+                    I started web development with react in 2018. So my brain
+                    works in a data-driven way by default.
                   </p>
                 </SkillCard>
 
