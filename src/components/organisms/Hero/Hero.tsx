@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import BlurredCirle from 'src/components/molecules/BlurredCirle/BlurredCirle'
 import OverlapSpace from 'src/components/molecules/OverlapSpace/OverlapSpace'
 import SlideIndicator from 'src/components/molecules/SlideIndicator'
@@ -53,11 +52,7 @@ const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
   const { show } = useStore((state) => state)
   return (
     <OverlapSpace className='relative h-screen overflow-hidden'>
-      <OverlapSpace.Child className='flex items-end justify-center mb-3 '>
-        <SlideIndicator direction='up' className='bottom-0 mt-auto left-1/2' />
-      </OverlapSpace.Child>
-
-      <OverlapSpace.Child className='flex flex-col items-start justify-center gap-6 -z-20 sm:flex-row sm:justify-start sm:items-center'>
+      <OverlapSpace.Child className='flex flex-col items-start justify-center gap-6 sm:flex-row sm:justify-start sm:items-center'>
         <div className='relative sm:h-full h-72 w-72'>
           <img
             alt='Karthick Ragavendran'
@@ -93,6 +88,9 @@ const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
             .
           </div>
         </div>
+      </OverlapSpace.Child>
+      <OverlapSpace.Child className='flex items-end justify-center mb-3 -z-30'>
+        <SlideIndicator direction='up' className='bottom-0 mt-auto left-1/2' />
       </OverlapSpace.Child>
       <OverlapSpace.Child className='-z-40'>
         <div className='fixed top-0 w-full h-full overflow-hidden translate-x-1/2 right-1/2 bg-gradient-to-r from-white to-gray-50 -z-40' />

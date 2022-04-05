@@ -14,7 +14,7 @@ type MyStore = {
 }
 
 export const useStore = create<MyStore>((set) => ({
-  show: false,
+  show: true,
   toggleShow: () => set((state) => ({ show: !state.show })),
 }))
 
