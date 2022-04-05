@@ -100,7 +100,7 @@ const Home: NextPage = ({
 
       <main>
         <Container>
-          <div ref={heroRef}>
+          <div ref={heroRef} className='z-40 -mt-16'>
             <Hero
               scrollToElegantUi={gotoElegantUi}
               scrollToRobustArch={gotoRobustArch}
@@ -452,13 +452,8 @@ const Home: NextPage = ({
           <BannerPoints height='min-h-50vh' title='Voice'>
             <Motto />
           </BannerPoints>
-          <CoverLetter />
         </Container>
       </main>
-
-      <footer className='py-12 mt-12 bg-primary-50'>
-        <Container>Portfolio</Container>
-      </footer>
     </div>
   )
 }

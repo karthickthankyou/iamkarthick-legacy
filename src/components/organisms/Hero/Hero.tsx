@@ -1,12 +1,9 @@
-import ArrowDownIcon from '@heroicons/react/solid/ArrowDownIcon'
 import { useState } from 'react'
-import Button from 'src/components/atoms/Button/Button'
 import BlurredCirle from 'src/components/molecules/BlurredCirle/BlurredCirle'
-import BlurredTriangle from 'src/components/molecules/BlurredTriangle/BlurredTriangle'
 import OverlapSpace from 'src/components/molecules/OverlapSpace/OverlapSpace'
-import Image from 'src/components/atoms/Image'
-import Links from '../Links'
 import SlideIndicator from 'src/components/molecules/SlideIndicator'
+import { useStore } from 'src/pages/_app'
+import Links from '../Links'
 
 export interface IHeroProps {
   scrollToElegantUi: () => void
@@ -53,22 +50,14 @@ const RingTL = ({
 )
 
 const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
-  const [showWave, setshowWave] = useState(true)
+  const { show } = useStore((state) => state)
   return (
     <OverlapSpace className='relative h-screen overflow-hidden'>
       <OverlapSpace.Child className='flex items-end justify-center mb-3 '>
         <SlideIndicator direction='up' className='bottom-0 mt-auto left-1/2' />
       </OverlapSpace.Child>
-      <OverlapSpace.Child className='flex items-start justify-end'>
-        <button
-          type='button'
-          onClick={() => setshowWave((state) => !state)}
-          className='z-30'
-        >
-          Turn that thing off!
-        </button>
-      </OverlapSpace.Child>
-      <OverlapSpace.Child className='z-10 flex flex-col items-start justify-center gap-6 sm:flex-row sm:justify-start sm:items-center'>
+
+      <OverlapSpace.Child className='flex flex-col items-start justify-center gap-6 -z-20 sm:flex-row sm:justify-start sm:items-center'>
         <div className='relative sm:h-full h-72 w-72'>
           <img
             alt='Karthick Ragavendran'
@@ -109,7 +98,7 @@ const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
         <div className='fixed top-0 w-full h-full overflow-hidden translate-x-1/2 right-1/2 bg-gradient-to-r from-white to-gray-50 -z-40' />
       </OverlapSpace.Child>
       <OverlapSpace.Child
-        className={`relative -z-30  ${showWave ? 'opacity-100' : 'opacity-0'}`}
+        className={`relative -z-30  ${show ? 'opacity-100' : 'opacity-0'}`}
       >
         <div className='container fixed top-0 w-full h-full mx-auto overflow-hidden '>
           <Ring
