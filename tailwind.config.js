@@ -34,7 +34,7 @@ const bluePallete = {
 const grayPallete = {
   DEFAULT: 'hsl(208, 10%, 32%)',
   25: 'hsl(208, 10%, 98%)',
-  50: 'hsl(208, 10%, 90%)',
+  50: 'hsl(208, 10%, 92%)',
   100: 'hsl(208, 10%, 80%)',
   200: 'hsl(208, 10%, 70%)',
   300: 'hsl(208, 10%, 60%)',
@@ -95,8 +95,12 @@ module.exports = {
       accent: primaryPallete.DEFAULT,
     },
     extend: {
+      minHeight: {
+        '50vh': '50vh',
+      },
       height: {
         screen50: '50vh',
+        screen60: '60vh',
         screen80: '80vh',
         screen90: '90vh',
       },
@@ -109,6 +113,8 @@ module.exports = {
         8: '8px',
         9: '9px',
         10: '10px',
+        16: '16px',
+        32: '32px',
       },
       borderWidth: {
         // DEFAULT: '1px',
@@ -122,7 +128,11 @@ module.exports = {
         'spin-360': 'spin 360s linear infinite',
         wiggle: 'wiggle 1s ease-in-out infinite',
         slide: 'slide 1s ease-in-out infinite',
-        'slide-left': 'slide-left 1s ease-in-out infinite',
+        'slide-left': 'slide-left 1s linear infinite',
+        'slide-left-100': 'slide-left-100 1s linear infinite',
+        'slide-up-100': 'slide-up-100 1s linear infinite',
+        'slide-down-100': 'slide-up-100 1s linear infinite',
+        'slide-right-100': 'slide-up-100 1s linear infinite',
         'slide-right': 'slide-right 1s linear infinite',
 
         'breathe-20': 'breathe-20 30s ease-in-out infinite',
@@ -167,50 +177,90 @@ module.exports = {
             opacity: 0,
           },
         },
+        'slide-left-100': {
+          '40%,60%': {
+            opacity: 1,
+          },
+          '46%': { transform: 'translateX(-100%)', opacity: 0 },
+          '54%': {
+            transform: 'translateX(100%)',
+            opacity: 0,
+          },
+        },
+        'slide-right-100': {
+          '40%,60%': {
+            opacity: 1,
+          },
+          '46%': { transform: 'translateX(100%)', opacity: 0 },
+          '54%': {
+            transform: 'translateX(-100%)',
+            opacity: 0,
+          },
+        },
+        'slide-up-100': {
+          '40%,60%': {
+            opacity: 1,
+          },
+          '46%': { transform: 'translateY(-100%)', opacity: 0 },
+          '54%': {
+            transform: 'translateY(100%)',
+            opacity: 0,
+          },
+        },
+        'slide-down-100': {
+          '40%,60%': {
+            opacity: 1,
+          },
+          '46%': { transform: 'translateY(100%)', opacity: 0 },
+          '54%': {
+            transform: 'translateY(-100%)',
+            opacity: 0,
+          },
+        },
         'breathe-80': {
-          '0%, 100%': { transform: 'scale(1)', opacity: 0 },
+          '0%, 100%': { transform: 'scale(.3)', opacity: 0.8 },
           '80%': {
             transform: 'scale(2)',
             opacity: 1,
           },
         },
         'breathe-70': {
-          '0%, 100%': { transform: 'scale(1)', opacity: 0 },
+          '0%, 100%': { transform: 'scale(.3)', opacity: 0.8 },
           '70%': {
             transform: 'scale(2)',
             opacity: 1,
           },
         },
         'breathe-60': {
-          '0%, 100%': { transform: 'scale(1)', opacity: 0 },
+          '0%, 100%': { transform: 'scale(.3)', opacity: 0.8 },
           '60%': {
             transform: 'scale(2)',
             opacity: 1,
           },
         },
         'breathe-50': {
-          '0%, 100%': { transform: 'scale(1)', opacity: 0 },
+          '0%, 100%': { transform: 'scale(.3)', opacity: 0.8 },
           '50%': {
             transform: 'scale(2)',
             opacity: 1,
           },
         },
         'breathe-40': {
-          '0%, 100%': { transform: 'scale(1)', opacity: 0 },
+          '0%, 100%': { transform: 'scale(.3)', opacity: 0.8 },
           '40%': {
             transform: 'scale(2)',
             opacity: 1,
           },
         },
         'breathe-30': {
-          '0%, 100%': { transform: 'scale(1)', opacity: 0 },
+          '0%, 100%': { transform: 'scale(.3)', opacity: 0.8 },
           '30%': {
             transform: 'scale(2)',
             opacity: 1,
           },
         },
         'breathe-20': {
-          '0%, 100%': { transform: 'scale(1)', opacity: 0 },
+          '0%, 100%': { transform: 'scale(.3)', opacity: 0.8 },
           '20%': {
             transform: 'scale(2)',
             opacity: 1,
@@ -257,11 +307,7 @@ module.exports = {
         208: '52rem',
         '90p': '90%',
       },
-      height: {
-        screen50: '50vh',
-        screen80: '80vh',
-        screen90: '90vh',
-      },
+
       lineHeight: {
         '80p': '80%',
         '90p': '90%',

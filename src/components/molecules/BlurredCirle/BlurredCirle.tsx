@@ -12,7 +12,7 @@ const BlurredCirle = ({
     <circle cx={radius / 2} cy={radius / 2} r={radius / 3} filter='url(#f1)' />
     <defs>
       <filter id='f1'>
-        <feGaussianBlur in='SourceGraphic' stdDeviation={radius / 160} />
+        <feGaussianBlur in='SourceGraphic' stdDeviation={0} />
       </filter>
     </defs>
   </svg>

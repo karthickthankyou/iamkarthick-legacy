@@ -69,17 +69,13 @@ a {
     @apply text-white bg-primary-500;
   }
   .text-luxury {
-    @apply text-gradient bg-gradient-to-tr via-black to-black from-primary;
+    @apply select-none text-gradient bg-gradient-to-tr via-black to-black from-primary;
   }
   .text-luxury-white {
     @apply text-gradient bg-gradient-to-tr via-white to-primary-300 from-white;
   }
   .bg-luxury {
     @apply text-white transition-all bg-gradient-to-tr via-black to-black from-primary;
-  }
-
-  .bg-white-transparent {
-    @apply inline-block py-2 pr-2 bg-white/90;
   }
 }
 
@@ -92,7 +88,7 @@ a {
 }
 
 .thin-scrollbar::-webkit-scrollbar-thumb {
-  @apply w-1 h-1 rounded-full bg-black/60;
+  @apply w-1 h-1 bg-black;
 }
 
 .no-scrollbar::-webkit-scrollbar {

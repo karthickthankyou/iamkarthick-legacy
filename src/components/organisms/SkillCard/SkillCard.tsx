@@ -20,24 +20,23 @@ const SkillCard = ({
     {type === 'title' && (
       <div className={`${type === 'title' && 'break-before-column'}`} />
     )}
-    <div className='break-inside-avoid'>
-      <div className='bg-white-transparent '>
+    {/*  className='break-inside-avoid' */}
+    <div>
+      <div className='  '>
         <div
           className={`inline-block ${
             type === 'title' && 'text-5xl text-luxury'
-          } ${
-            type === 'subtitle' && 'text-2xl'
-          } font-black bg-white-transparent`}
+          } ${type === 'subtitle' && 'text-2xl'} font-black  `}
         >
           {title}
         </div>
       </div>
       {experience && (
-        <div className='bg-white-transparent'>
+        <div className=' '>
           {experience} {experience === 1 ? 'year' : 'years'}
         </div>
       )}
-      <div className='space-y-4 text-lg bg-white-transparent'>{children}</div>
+      <div className='space-y-4 text-lg  '>{children}</div>
     </div>
   </>
 )
