@@ -4,7 +4,7 @@ import { Children } from 'src/types'
 export interface ISkillCardProps {
   title: string
   experience?: number
-  children: Children
+  children?: Children
   type?: 'title' | 'subtitle'
 }
 

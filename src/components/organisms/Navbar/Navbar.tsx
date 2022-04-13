@@ -8,7 +8,7 @@ export interface INavbarProps {}
 const Navbar = () => {
   const toggleShow = useStore((state) => state.toggleShow)
   return (
-    <nav className='sticky top-0 z-50 backdrop-grayscale bg-white/20 backdrop-filter'>
+    <nav className='sticky top-0 z-50 backdrop-grayscale bg-white/50 backdrop-filter'>
       <Container>
         <div className='flex items-center justify-between py-2 '>
           <Logo />

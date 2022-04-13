@@ -1,16 +1,14 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'src/components/atoms/Link'
 import { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from 'src/store'
 import { selectCount } from 'src/store/counter'
-import { increment, setCounterState } from 'src/store/counter/counterSlice'
+import { setCounterState } from 'src/store/counter/counterSlice'
 import { NextSeo } from 'next-seo'
 import Hero from 'src/components/organisms/Hero'
 import SkillCard from 'src/components/organisms/SkillCard'
 import Container from 'src/components/atoms/Container/Container'
-import HR from 'src/components/molecules/HR/HR'
-import Image from 'src/components/atoms/Image'
+
 import ProductCard from 'src/components/organisms/ProductCard/ProductCard'
 import TechBadge from 'src/components/atoms/TechBadge/TechBadge'
 import { useScrollTo } from 'src/hooks'
@@ -19,9 +17,10 @@ import {
   BulletPoint,
   Point,
 } from 'src/components/organisms/BannerPoints/BannerPoints'
-import CoverLetter from 'src/components/organisms/CoverLetter'
 import SlideIndicator from 'src/components/molecules/SlideIndicator'
 import { Motto } from 'src/components/content'
+import ExternalLink from 'src/components/atoms/ExternalLink/ExternalLink'
+import Links from 'src/components/organisms/Links/Links'
 
 export const getStaticProps: GetStaticProps = async () => ({
   props: { data: ['Karthick', 'Ragavendran'] }, // will be passed to the page component as props
@@ -118,35 +117,70 @@ const Home: NextPage = ({
                 style={{ columnWidth: '16rem', columnFill: 'auto' }}
               >
                 <Point title='Design system'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                  <div>
+                    The design system reduces the decision fatigue that affects
+                    the quality of the decisions and improves consistency and
+                    developer experience.
+                  </div>
+                  <div className='mt-3 '>
+                    <ExternalLink href='https://javascript.plainenglish.io/design-systems-why-aedbacf9d578'>
+                      Why should you have a design system for your product?
+                    </ExternalLink>
+                    <ExternalLink href='https://karthickragavendran.medium.com/design-system-foundations-using-tailwind-abb1af1acabb'>
+                      Design system foundations using tailwind.
+                    </ExternalLink>
+                    <ExternalLink href='https://karthickragavendran.medium.com/design-system-components-using-tailwind-42f2fdb3a56'>
+                      Design system components using tailwind.
+                    </ExternalLink>
+                  </div>
                 </Point>
 
                 <Point title='Isolated component development & testing'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                  <p>
+                    React is data-driven and hence each frame/snapshot in the
+                    application's runtime can be reproduced with the right data.
+                  </p>
+                  <p>
+                    Any component can go through a variety of states in an
+                    application's runtime. Having a detailed catalog of all
+                    components with all those possible states provides great
+                    confidence.
+                  </p>
                 </Point>
                 <Point title='Composition'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                  <p>
+                    Often flexibility and complexity grow together. When we want
+                    a component to be adapted to numerous scenarios we may end
+                    up making the component unwieldy.
+                  </p>
+                  <p>
+                    The concept of children prop in react helps us drastically
+                    reduce the complexity while increasing flexibility.
+                  </p>
                 </Point>
                 <Point title='Atomic design'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                  We discussed isolated component development with composition.
+                  The methodology of atomic design helps us organize the
+                  components hierarchically. That increases reusability and
+                  consistency.
                 </Point>
                 <Point title='Styling abstraction using components'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                  <p>
+                    The priority scheme to determine the right style rule based
+                    on a brilliant game of specificity quickly became a
+                    nightmare as the applications grew larger. Huge applications
+                    needed grandmasters of CSS to modify something.
+                  </p>
+                  <p>
+                    CSS modules, Styled components, and utility first CSS
+                    localizes the styles to the component level and hence allows
+                    the UI developers to almost skip the game of specificity and
+                    develop UI's instead.
+                  </p>
                 </Point>
                 <Point title='UX foundations'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                  Being aware and following the simple laws of UX allows us to
+                  produce good UI quickly.
                 </Point>
               </div>
             </div>
@@ -163,48 +197,151 @@ const Home: NextPage = ({
               >
                 <Point title='Functional programming'>
                   <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Maxime in quo consectetur, sit at,
+                    Debugging takes the most time out of the software engineers'
+                    life.
                   </p>
                   <p>
-                    Aiores minus nam impedit nesciunt magni quaerat, sed
-                    asperiores!
+                    The biggest culprit of software debugging is figuring out
+                    the <strong>expected mutations.</strong>
                   </p>
+                  <p>
+                    The concepts of pure functions and immutability by keeping
+                    the side-effect code separately make debugging a breeze.
+                  </p>
+                  <p>An easily debuggable software is a healthy software.</p>
+                  <ExternalLink href='https://javascript.plainenglish.io/pure-functions-why-c925c55347b8'>
+                    Pure functions. Why?
+                  </ExternalLink>
+                  <ExternalLink href='https://javascript.plainenglish.io/understanding-immutability-d00ed097e020'>
+                    Lets understand immutability.
+                  </ExternalLink>
+                  <ExternalLink href='https://javascript.plainenglish.io/fix-a-pain-point-like-immerjs-e4a4e4a63441'>
+                    Fix it like immer.
+                  </ExternalLink>
                 </Point>
                 <Point title='Redux'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                  <p>Is redux dead?</p>
+                  <p>
+                    Redux is a architectural pattern than a library and hence
+                    can not be replaced with other global state management
+                    libraries and network clients.
+                  </p>
+
+                  <p>
+                    The unidirectional control flow reduces complexity in
+                    enterprise sized application. Even if the application grows
+                    to hundreds of pages and thousands of components, each unit
+                    needs to think about <strong>what data I select?</strong>{' '}
+                    and
+                    <strong> what action I dispatch?</strong>
+                  </p>
+                  <ExternalLink href='https://karthickragavendran.medium.com/enterprise-application-architecture-with-redux-time-machine-attached-3da8c12b115a'>
+                    Enterprise application architecture with redux
+                  </ExternalLink>
+                  <ExternalLink href='https://karthickragavendran.medium.com/redux-everything-under-the-ui-16043964c359'>
+                    Redux everything under UI
+                  </ExternalLink>
+                  <ExternalLink href='https://javascript.plainenglish.io/how-to-quantify-the-complexity-of-a-react-application-with-redux-6f1a501e9454'>
+                    How to Quantify the Complexity of a React App with Redux?
+                  </ExternalLink>
+                  <ExternalLink href='https://karthickragavendran.medium.com/advanced-redux-slices-with-reselect-async-thunk-68b0a459f723'>
+                    Advanced Redux Slices with Reselect & Async thunk
+                  </ExternalLink>
+                  <ExternalLink href='https://karthickragavendran.medium.com/selectors-actions-hooks-architecture-with-redux-toolkit-a41ac1b36007'>
+                    Selectors-Actions-Hooks architecture with Redux Toolkit
+                  </ExternalLink>
                 </Point>
                 <Point title='Observables'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                  <p>
+                    The realm of asynchronous programming can get absolutely
+                    chaotic as the nature and timeline of operations gets
+                    complex. Observable streams provide a place for the
+                    developers to calmly sit and notice the incoming events and
+                    orchestrate them with clarity and precision.
+                  </p>
+                  <p>Observables are promises on steroids.</p>
                 </Point>
                 <Point title='Typescript'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                  <p>A well-typed project enables reckless refactoring.</p>
+                  <p>
+                    Like a good automation tool, typescript language takes away
+                    a lot of cognitive load from the developers' minds. Although
+                    it has a decent learning curve, the outcome makes typescript
+                    a must-have.
+                  </p>
+                  <ExternalLink href='https://karthickragavendran.medium.com/typescript-why-866281eaebf8'>
+                    Typescript. Why?
+                  </ExternalLink>
+                  <ExternalLink href='https://javascript.plainenglish.io/typescript-how-to-create-synchronized-derived-types-4bf2371a9eab'>
+                    TypeScript: How to create Synchronized derived types?
+                  </ExternalLink>
+                  <ExternalLink href='https://karthickragavendran.medium.com/protect-react-codebase-with-eslint-prettier-typescript-lint-staged-and-husky-9dd549bdb1c'>
+                    Protect react codebase with Eslint, Prettier, Typescript,
+                    Lint-staged and husky.
+                  </ExternalLink>
                 </Point>
                 <Point title='Tests that mimic the user'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                  <p>Testing is a reinforcement loop.</p>
+                  <p>
+                    The test suites that only break when the application fails
+                    are the good ones.
+                  </p>
+                  <p>
+                    The test suite that breaks for everything including
+                    application failures becomes tiresome and may result in
+                    abandonment.
+                  </p>
                 </Point>
                 <Point title='Visual Regression'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                  <p>
+                    Along with functional testing, visual regression testing
+                    provides almost confidence.
+                  </p>
+                  <p>
+                    Chromatic works in tandem with the storybook and catches UI
+                    changes at a pixel level. It will be a great help for
+                    confident pull requests.
+                  </p>
                 </Point>
-                <Point title='Caching'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                <Point title='A powerful network client'>
+                  <p>
+                    A powerful network client will serve the application with
+                    the below functionalities too.
+                  </p>
+                  <ul>
+                    <li>Caching</li>
+                    <li>Normalized caching (GraphQL)</li>
+                    <li>Manage stale data</li>
+                    <li>Request deduplication and so on</li>
+                  </ul>
                 </Point>
                 <Point title='Git hooks & CI/CD'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime in quo consectetur, sit at, maiores minus nam impedit
-                  nesciunt magni quaerat, sed asperiores!
+                  Pre-commit validations enables us to do stress free YOLO
+                  commits.
+                </Point>
+                <Point title='GraphQL'>
+                  <p>
+                    Graphql is definitely more representational than REST.
+                    GraphQL is also self-documenting as it evolves.
+                  </p>
+                  <ExternalLink href='https://www.youtube.com/watch?v=iQrsckyou_8'>
+                    GraphQL API With Express, MongoDB, and JWT
+                  </ExternalLink>
+                </Point>
+                <Point title='Codegen'>
+                  <p>
+                    Most types we use in the application are derived from the
+                    server state. Typescript is not fun if we need to create and
+                    maintain the ever-changing types ourselves.
+                  </p>
+                  <p>
+                    The ability to generate types and fetching hooks with a
+                    simple command will save a huge amount of precious effort
+                    from developers.
+                  </p>
+                  <ExternalLink href='https://karthickragavendran.medium.com/react-query-in-ssr-starring-graphql-codegen-54c0dc4b07b4'>
+                    React Query in SSR starring Graphql-Codegen
+                  </ExternalLink>
                 </Point>
               </div>
             </div>
@@ -222,182 +359,59 @@ const Home: NextPage = ({
                 className='gap-4 space-y-4 h-screen80'
                 style={{ columnWidth: '24rem' }}
               >
-                <SkillCard title='Core' type='title'>
-                  <p>
-                    I am fond of functional javascript. I believe that if the
-                    application is made with pure functions it become super easy
-                    to work with and evolve.
-                  </p>
-                </SkillCard>
-                <SkillCard title='Javascript' experience={4}>
-                  <p>
-                    I am fond of functional javascript. I believe that if the
-                    application is made with pure functions it become super easy
-                    to work with and evolve.
-                  </p>
+                <SkillCard title='Core' type='title' />
+                <SkillCard title='Javascript' experience={4} />
+                <SkillCard title='CSS' experience={4} />
+                <SkillCard title='HTML' experience={4} />
+                <SkillCard title='React' experience={3.5} />
+                <SkillCard title='Next JS' experience={1} />
 
-                  <div>
-                    <Link
-                      href='https://javascript.plainenglish.io/javascript-currying-practical-example-512cf1099e81'
-                      className='w-4 h-4 bg-black rounded-full'
-                    >
-                      {'a '}
-                    </Link>
-                  </div>
-                </SkillCard>
+                <SkillCard title='Architecture' type='title' />
+                <SkillCard title='Redux' experience={3.5} />
+                <SkillCard title='Typescript' experience={3} />
+                <SkillCard title='RxJS' experience={0.5} />
+                <SkillCard title='Immer' experience={0.5} />
+                <SkillCard title='React hook form' experience={1} />
+                <SkillCard title='Yup' experience={1} />
+                <SkillCard title='graphql-code-generator' experience={1} />
 
-                <SkillCard title='CSS' experience={4}>
-                  <p>
-                    I am a big fan of utility first CSS. With tailwind, I can
-                    develop UI at the speed of writing.
-                  </p>
+                <SkillCard title='UI' type='title' experience={4} />
+                <SkillCard title='Storybook' experience={2} />
+                <SkillCard title='Tailwind' experience={1.5} />
+                <SkillCard title='Chromatic' experience={1.5} />
+                <SkillCard title='Material UI' experience={3} />
+                <SkillCard title='Headless UI' experience={1.5} />
+                <SkillCard title='D3' experience={1} />
+                <SkillCard title='Framer motion' experience={1} />
+                <SkillCard title='React spring' experience={1} />
 
-                  <div>
-                    <Link
-                      href='https://javascript.plainenglish.io/javascript-currying-practical-example-512cf1099e81'
-                      className='w-4 h-4 bg-black rounded-full'
-                    >
-                      {'a '}
-                    </Link>
-                  </div>
-                </SkillCard>
-                <SkillCard title='HTML' experience={4}>
-                  <p>
-                    I am fond of functional javascript. I believe that if the
-                    application is made with pure functions it become super easy
-                    to work with and evolve.
-                  </p>
+                <SkillCard title='Testing' type='title' experience={4} />
+                <SkillCard title='React testing library' experience={1.5} />
+                <SkillCard title='Jest' experience={2} />
+                <SkillCard title='Cypress' experience={1.5} />
+                <SkillCard title='Eslint' experience={3} />
+                <SkillCard title='Prettier' experience={3} />
+                <SkillCard title='Husky' experience={1} />
+                <SkillCard title='Lint staged' experience={1} />
+                <SkillCard title='MSW' experience={1} />
 
-                  <div>
-                    <Link
-                      href='https://javascript.plainenglish.io/javascript-currying-practical-example-512cf1099e81'
-                      className='w-4 h-4 bg-black rounded-full'
-                    >
-                      {'a '}
-                    </Link>
-                  </div>
-                </SkillCard>
-                <SkillCard title='React' experience={3.5}>
-                  <p>
-                    I started web development with react in 2018. So my brain
-                    works in a data-driven way by default.
-                  </p>
-                  <p>
-                    My favorite thing about react is composability. A lot of
-                    components I create are composable like mixing and matching
-                    the lego pieces.
-                  </p>
-                </SkillCard>
-                <SkillCard title='Next JS' experience={1}>
-                  <p>
-                    I started web development with react in 2018. So my brain
-                    works in a data-driven way by default.
-                  </p>
-                </SkillCard>
+                <SkillCard title='Backend' type='title' />
+                <SkillCard title='NodeJS' experience={4} />
+                <SkillCard title='Express' experience={2} />
+                <SkillCard title='GraphQL' experience={2} />
+                <SkillCard title='Firebase' experience={3} />
+                <SkillCard title='Hasura' experience={1.5} />
 
-                <SkillCard title='Architecture' type='title'>
-                  <p>
-                    I started web development with react. So my brain works in a
-                    data-driven way by default.
-                  </p>
-                </SkillCard>
-                <SkillCard title='Redux' experience={3.5}>
-                  <p>
-                    I started web development with react. So my brain works in a
-                    data-driven way by default.
-                  </p>
-                </SkillCard>
-                <SkillCard title='RxJS' experience={0.5}>
-                  <p>
-                    I started web development with react. So my brain works in a
-                    data-driven way by default.
-                  </p>
-                </SkillCard>
-                <SkillCard title='Immer' experience={0.5}>
-                  <p>
-                    I started web development with react. So my brain works in a
-                    data-driven way by default.
-                  </p>
-                </SkillCard>
+                <SkillCard title='Others' type='title' />
+                <SkillCard title='Web scraping' experience={1} />
+                <SkillCard title='Data science' experience={0.5} />
+                <SkillCard title='Machine learning' experience={0.5} />
 
-                <SkillCard title='Design System' experience={2}>
-                  <p>
-                    Anything that comprises an application should look like they
-                    belong together. I have an eye to immediately detect
-                    inconsistent UI.
-                  </p>
-                </SkillCard>
-
-                <SkillCard title='UI' type='title' experience={4}>
-                  <p>
-                    I have worked with companies that do not have a dedicated UX
-                    designer.
-                  </p>
-                  <p>
-                    Following the basic rules of UX, I can design (and develop)
-                    consistent looking UI that provide smoother user experience.
-                  </p>
-                </SkillCard>
-
-                <SkillCard title='Tailwind' experience={1.5}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
-                  numquam quaerat fugiat!
-                </SkillCard>
-
-                <SkillCard title='Storybook' experience={2}>
-                  <p>
-                    Storybook drastically changed the way I think about UI. It
-                  </p>
-                </SkillCard>
-                <SkillCard title='Chromatic' experience={1.5}>
-                  <p>
-                    Storybook drastically changed the way I think about UI. It
-                  </p>
-                </SkillCard>
-
-                <SkillCard title='React hook form' experience={0.5}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
-                  numquam quaerat fugiat!
-                </SkillCard>
-
-                <SkillCard title='Typescript' experience={3}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
-                  numquam quaerat fugiat!
-                </SkillCard>
-                <SkillCard title='Eslint' experience={3}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
-                  numquam quaerat fugiat!
-                </SkillCard>
-                <SkillCard title='Prettier' experience={3}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
-                  numquam quaerat fugiat!
-                </SkillCard>
-
-                <SkillCard title='Husky' experience={1}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
-                  numquam quaerat fugiat!
-                </SkillCard>
-                <SkillCard title='Lint staged' experience={1}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
-                  numquam quaerat fugiat!
-                </SkillCard>
-
-                <SkillCard title='Cypress' experience={1.5}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
-                  numquam quaerat fugiat!
-                </SkillCard>
-                <SkillCard title='MSW' experience={1}>
-                  <p>
-                    I started web development with react. So my brain works in a
-                    data-driven way by default.
-                  </p>
-                </SkillCard>
-                <SkillCard title='D3' experience={1}>
-                  <p>
-                    I started web development with react. So my brain works in a
-                    data-driven way by default.
-                  </p>
-                </SkillCard>
+                <SkillCard title='Previously worked on' type='title' />
+                <SkillCard title='Unity3D' experience={3} />
+                <SkillCard title='C#' experience={3} />
+                <SkillCard title='Android development' experience={2} />
+                <SkillCard title='Java' experience={2} />
               </div>
             </div>
           </div>
@@ -409,6 +423,18 @@ const Home: NextPage = ({
             title='IKEA clone'
             src='https://res.cloudinary.com/thankyou/image/upload/v1649069402/iamkarthick/ikea-home_uvdzib.png'
           >
+            <div className='flex flex-col'>
+              <a href='//ikea.iamkarthick.com' target='_blank' rel='noreferrer'>
+                ikea.iamkarthick.com
+              </a>
+              <a
+                href='//story.ikea.iamkarthick.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                story.ikea.iamkarthick.com
+              </a>
+            </div>
             <div className='flex flex-wrap gap-3' ref={ikeaRef}>
               <TechBadge text='React' />
               <TechBadge text='Redux' />
@@ -445,6 +471,7 @@ const Home: NextPage = ({
           </ProductCard>
           <BannerPoints title='Special skills' description='About myself'>
             <BulletPoint description='I can create UI at the speed of writing.' />
+            <BulletPoint description='Even if I am completely bored about something, I can start focusing and get things done.' />
             <BulletPoint description='Learning more makes learning easier. I am interesting in taking any challenging tasks involving fields. I am interested in data science and ML.' />
             <BulletPoint description='I can squeeze in last bit of performance.' />
             <BulletPoint description='I am interested in web scraping.' />

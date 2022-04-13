@@ -20,9 +20,11 @@ const ProductCard = React.forwardRef<HTMLDivElement, IProductCardProps>(
         </div>
         <div className='flex h-full gap-2 pb-3 overflow-x-scroll bg-white md:-skew-x-3 overscroll-x-none thin-scrollbar snap-proximity'>
           <div className='relative flex-shrink-0 h-screen80 '>
-            <img
-              src='https://res.cloudinary.com/thankyou/image/upload/v1649076995/iamkarthick/46aP2QbqUqBqpx5c7Zikd2HFMqywJNqDeZVr22vYLLq3mmDMvC912rHdNBhAedaBaUAW5aF7NFVhWLBXM7zWakKcqK41_vb0mox.gif'
-              alt='pic'
+            {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+            <video
+              autoPlay
+              controls
+              src='https://res.cloudinary.com/thankyou/video/upload/v1649852674/IKEA/ikea-home_ktr1qk.mov'
               className='object-cover h-full bg-fixed w-96 -z-10'
             />
             <div className='absolute bottom-0 w-full p-4 text-white bg-black/60'>
@@ -53,17 +55,7 @@ const ProductCard = React.forwardRef<HTMLDivElement, IProductCardProps>(
       </div>
       <div className='md:-skew-x-3'>
         <div className='inline-block mt-2 text-5xl font-black '>{title}</div>
-        <p className='mt-6'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
-          quibusdam ducimus corporis, architecto quasi dolorem quidem,
-          repellendus non animi eos maiores nesciunt quae deleniti!
-        </p>
-        <p className=''>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
-          quibusdam ducimus corporis, architecto quasi dolorem quidem,
-          repellendus non animi eos maiores nesciunt quae deleniti!
-        </p>
-        <div className='mt-1 '>{children}</div>
+        <div className='mt-6 '>{children}</div>
       </div>
     </div>
   ),

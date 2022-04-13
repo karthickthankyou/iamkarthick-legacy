@@ -18,9 +18,9 @@ export const Point = ({
   children: Children
   className?: string
 }) => (
-  <div className={`max-w-md space-y-1 ${className}`}>
+  <div className={`max-w-md  ${className}`}>
     <div className='text-2xl font-bold '>{title}</div>
-    <div className='mt-3 text-lg'>{children}</div>
+    <div className='mt-2 space-y-2 text-sm'>{children}</div>
   </div>
 )
 export const BulletPoint = ({ description }: { description: string }) => (
@@ -33,7 +33,7 @@ const BannerPoints = React.forwardRef<HTMLDivElement, IBannerPointsProps>(
   ({ title, description, children, height = 'min-h-screen' }, ref) => (
     <div className={`${height} py-12 space-y-6 `} ref={ref}>
       <div className=''>
-        <div className='text-3xl font-bold text-luxury '>{title}</div>
+        <div className='text-3xl font-bold text-primary '>{title}</div>
       </div>
       <div className='text-xl'>{description}</div>
       {children}

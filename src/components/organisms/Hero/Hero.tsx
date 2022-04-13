@@ -50,11 +50,14 @@ const RingTL = ({
 
 const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
   const { show } = useStore((state) => state)
+  const setHoverTargetType = useStore((state) => state.setHoverTargetType)
   return (
     <OverlapSpace className='relative h-screen overflow-hidden'>
       <OverlapSpace.Child className='flex flex-col items-start justify-center gap-6 sm:flex-row sm:justify-start sm:items-center'>
         <div className='relative sm:h-full h-72 w-72'>
           <img
+            onMouseEnter={() => setHoverTargetType('IMAGE')}
+            onMouseLeave={() => setHoverTargetType('DEFAULT')}
             alt='Karthick Ragavendran'
             width={256}
             height={256}
@@ -68,12 +71,15 @@ const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
             Ragavendran
           </div>
           <Links />
-          <div className='max-w-md mt-6 text-lg'>
+
+          <div className='max-w-md mt-2 text-lg'>
             I create React applications with{' '}
             <button
               type='button'
               className='font-medium underline underline-offset-4 '
               onClick={() => scrollToElegantUi()}
+              onMouseEnter={() => setHoverTargetType('LINK')}
+              onMouseLeave={() => setHoverTargetType('DEFAULT')}
             >
               <strong>elegant UI</strong>
             </button>{' '}
@@ -82,6 +88,8 @@ const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
               className='font-medium underline underline-offset-4 '
               type='button'
               onClick={() => scrollToRobustArch()}
+              onMouseEnter={() => setHoverTargetType('LINK')}
+              onMouseLeave={() => setHoverTargetType('DEFAULT')}
             >
               <strong>robust architecture</strong>
             </button>
@@ -100,31 +108,31 @@ const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
       >
         <div className='container fixed top-0 w-full h-full mx-auto overflow-hidden '>
           <Ring
-            className='stroke-10 animate-breathe-20 stroke-white fill-transparent '
+            className='stroke-4 animate-breathe-20 stroke-white fill-transparent '
             radius={1200}
           />
           <Ring
-            className='stroke-10 stroke-white fill-transparent animate-breathe-30 '
+            className='stroke-4 stroke-white fill-transparent animate-breathe-30 '
             radius={1000}
           />
           <Ring
-            className='stroke-10 stroke-white animate-breathe-40 fill-transparent -z-30'
+            className='stroke-4 stroke-white animate-breathe-40 fill-transparent -z-30'
             radius={800}
           />
           <Ring
-            className='stroke-10 stroke-white animate-breathe-50 fill-transparent -z-20'
+            className='stroke-4 stroke-white animate-breathe-50 fill-transparent -z-20'
             radius={600}
           />
           <Ring
-            className='stroke-10 stroke-white animate-breathe-60 fill-transparent -z-20'
+            className='stroke-4 stroke-white animate-breathe-60 fill-transparent -z-20'
             radius={400}
           />
           <Ring
-            className='stroke-10 stroke-white animate-breathe-70 fill-transparent -z-20'
+            className='stroke-4 stroke-white animate-breathe-70 fill-transparent -z-20'
             radius={200}
           />
           <Ring
-            className='stroke-10 stroke-white animate-breathe-80 fill-transparent -z-20'
+            className='stroke-4 stroke-white animate-breathe-80 fill-transparent -z-20'
             radius={100}
           />
           <Ring className=' fill-white -z-20' radius={40} />

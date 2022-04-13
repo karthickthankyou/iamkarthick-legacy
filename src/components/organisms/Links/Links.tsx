@@ -4,7 +4,11 @@ import { SiMedium } from '@react-icons/all-files/si/SiMedium'
 import { SiSoundcloud } from '@react-icons/all-files/si/SiSoundcloud'
 import { SiTwitter } from '@react-icons/all-files/si/SiTwitter'
 import { SiYoutube } from '@react-icons/all-files/si/SiYoutube'
+import { FaMusic } from '@react-icons/all-files/fa/FaMusic'
+import { SiDribbble } from '@react-icons/all-files/si/SiDribbble'
 import Link from 'src/components/atoms/Link/Link'
+import { SiKaggle } from '@react-icons/all-files/si/SiKaggle'
+import { useStore } from 'src/pages/_app'
 
 export interface ILinksProps {}
 export interface IOneLinkProps {
@@ -12,11 +16,23 @@ export interface IOneLinkProps {
   href: string
 }
 
-const OneLink = ({ Icon, href }: IOneLinkProps) => (
-  <a target='_blank' rel='noreferrer' href={href} className='p-0.5 group'>
-    <Icon className='w-8 h-8 p-1.5 fill-white bg-black  group-hover:bg-luxury transition-colors ' />
-  </a>
-)
+export const OneLink = ({ Icon, href }: IOneLinkProps) => {
+  const setHoverTargetType = useStore((state) => state.setHoverTargetType)
+  return (
+    <a
+      target='_blank'
+      rel='noreferrer'
+      href={href}
+      className='p-0.5 group cursor-pointer'
+      onMouseEnter={() => {
+        setHoverTargetType('LINK')
+      }}
+      onMouseLeave={() => setHoverTargetType('DEFAULT')}
+    >
+      <Icon className='w-8 h-8 p-1.5 fill-black shadow-xl shadow-gray/10 bg-white ' />
+    </a>
+  )
+}
 
 const Links = () => (
   <div className='flex gap-3 mt-3'>
@@ -34,6 +50,15 @@ const Links = () => (
     <OneLink
       Icon={SiSoundcloud}
       href='https://soundcloud.com/search?q=karthick%20ragavendran'
+    />
+    <OneLink
+      Icon={FaMusic}
+      href='https://www.youtube.com/channel/UCJwnuB7qJYxUFjes6T-Al_A'
+    />
+    <OneLink Icon={SiDribbble} href='https://dribbble.com/karthickthankyou' />
+    <OneLink
+      Icon={SiKaggle}
+      href='https://www.kaggle.com/karthickragavendran'
     />
   </div>
 )
