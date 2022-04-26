@@ -354,13 +354,11 @@ const Home: NextPage = ({
             </div>
           </BannerPoints>
 
-          <div className='group' ref={stackRef}>
+          <div className='py-4 group' ref={stackRef}>
             <div className='tracking-widest uppercase transition-all translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 text-primary'>
               Basic Skills
             </div>
-            <div className='flex justify-end'>
-              <SlideIndicator direction='left' />
-            </div>
+
             <div className='h-full overflow-x-scroll overscroll-x-none thin-scrollbar'>
               <div
                 className='gap-4 space-y-4 h-screen80'
@@ -421,12 +419,15 @@ const Home: NextPage = ({
                 <SkillCard title='Java' experience={2} />
               </div>
             </div>
+            <div className='flex justify-end'>
+              <SlideIndicator direction='left' />
+            </div>
           </div>
 
           <div className='my-24' />
 
           <div className='space-y-36'>
-            <div ref={ikeaRef} />
+            <div className='py-1' ref={ikeaRef} />
             <PortfolioProjectSection>
               <ProjectVideo videoId='uqXiXxlZKis' />
               <ProjectText
@@ -471,7 +472,7 @@ const Home: NextPage = ({
                 ]}
               />
             </PortfolioProjectSection>
-            <div ref={zillowRef} />
+            <div className='py-1' ref={zillowRef} />
             <PortfolioProjectSection>
               <ProjectText
                 right={false}
@@ -524,7 +525,7 @@ const Home: NextPage = ({
 
               <ProjectVideo videoId='lxXosGgMjl0' />
             </PortfolioProjectSection>
-            <div ref={epicRef} />
+            <span ref={epicRef} />
             <PortfolioProjectSection>
               <ProjectVideo videoId='Yu39Iw937dI' />
               <ProjectText

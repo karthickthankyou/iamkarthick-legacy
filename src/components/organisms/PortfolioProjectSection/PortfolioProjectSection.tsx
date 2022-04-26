@@ -52,9 +52,7 @@ export const ProjectText = ({
       <div className='flex-shrink-0 px-4 py-3 text-6xl font-black tracking-tighter text-white rounded-t-3xl bg-primary'>
         {title}
       </div>
-      <div className='flex justify-end p-1'>
-        <SlideIndicator direction='left' />
-      </div>
+
       <div
         className='flex-grow overflow-x-scroll thin-scrollbar'
         style={{ columnWidth: '16rem' }}
@@ -81,6 +79,9 @@ export const ProjectText = ({
             </div>
           ))}
         </div>
+      </div>
+      <div className='flex justify-end p-1'>
+        <SlideIndicator direction='left' />
       </div>
     </div>
   )
