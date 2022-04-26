@@ -31,15 +31,19 @@ export const ProjectVideo = ({ videoId }: { videoId: string }) => {
 }
 
 export const ProjectText = ({
+  intro,
   title,
   links,
   techStack,
   className,
+  repository,
   right = true,
 }: {
-  title?: string
-  techStack?: string[]
-  links?: { text: string; url: string }[]
+  intro: React.ReactNode
+  title: string
+  techStack: string[]
+  links: { text: string; url: string }[]
+  repository: string
   className?: string
   right?: boolean
 }) => {
@@ -47,17 +51,18 @@ export const ProjectText = ({
   const setHoverTargetType = useStore((state) => state.setHoverTargetType)
   return (
     <div
-      className={`col-span-1 flex h-full flex-col overflow-x-scroll overscroll-x-none ease-in-expo duration-1000 bg-circuit transition-all  ${className} ${rightClasses}`}
+      className={`col-span-1 flex h-full flex-col overflow-x-scroll overscroll-x-none bg-white/10 duration-1000 bg-circuit transition-all  ${className} ${rightClasses}`}
     >
       <div className='flex-shrink-0 px-4 py-3 text-6xl font-black tracking-tighter text-white rounded-t-3xl bg-primary'>
         {title}
       </div>
 
       <div
-        className='flex-grow overflow-x-scroll thin-scrollbar'
+        className='flex-grow p-4 overflow-x-scroll thin-scrollbar'
         style={{ columnWidth: '16rem' }}
       >
-        <div className='flex flex-col items-start gap-4 p-4'>
+        <div className='mb-4 space-y-2 text-xl font-light '>{intro}</div>
+        <div className='flex flex-col items-start gap-4 my-4'>
           {links?.map((item) => (
             <a
               onMouseEnter={() => setHoverTargetType('LINK')}
@@ -65,19 +70,30 @@ export const ProjectText = ({
               target='_blank'
               key={item.text}
               href={item.url}
-              className='inline-block px-2 py-1 text-3xl underline bg-white underline-offset-8'
+              className='inline-block py-1 text-3xl underline underline-offset-8'
               rel='noreferrer'
             >
               {item.text}
             </a>
           ))}
         </div>
-        <div className='flex flex-wrap gap-2 p-4'>
+        <div className='mt-6'>Made with love and</div>
+        <div className='flex flex-wrap gap-2 my-4'>
           {techStack?.map((item) => (
             <div key={item} className='px-2 py-1 text-lg bg-white shadow'>
               {item}
             </div>
           ))}
+        </div>
+        <div>
+          <a
+            onMouseEnter={() => setHoverTargetType('LINK')}
+            onMouseLeave={() => setHoverTargetType('DEFAULT')}
+            className='mt-8'
+            href={repository}
+          >
+            Go to code
+          </a>
         </div>
       </div>
       <div className='flex justify-end p-1'>

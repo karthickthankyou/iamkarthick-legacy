@@ -43,7 +43,7 @@ const MyDialog = ({ open, setOpen, children }: IMyDialogProps) => (
           leaveFrom='opacity-100 scale-100'
           leaveTo='opacity-0 scale-95'
         >
-          <div className='inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white rounded-sm shadow-xl '>
+          <div className='inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform rounded-sm shadow-xl backdrop-blur backdrop-filter bg-white/50 '>
             <button
               type='button'
               className='absolute top-0 right-0 flex items-center justify-center w-8 h-8'

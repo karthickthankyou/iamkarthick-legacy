@@ -43,11 +43,11 @@ const Links = () => (
       Icon={SiYoutube}
       href='https://www.youtube.com/channel/UC82M9uZCd7c7mM7-WEaWJlA'
     />
-    <OneLink Icon={SiNpm} href='https://www.npmjs.com/~iamkarthick' />
     <OneLink
       Icon={SiLinkedin}
       href='https://www.linkedin.com/in/iamkarthickr/'
     />
+    <OneLink Icon={SiNpm} href='https://www.npmjs.com/~iamkarthick' />
     <OneLink Icon={SiTwitter} href='https://twitter.com/karthicthankyou' />
     <OneLink
       Icon={SiSoundcloud}

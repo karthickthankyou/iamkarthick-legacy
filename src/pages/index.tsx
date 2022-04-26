@@ -19,6 +19,9 @@ import PortfolioProjectSection, {
   ProjectVideo,
   ProjectText,
 } from 'src/components/organisms/PortfolioProjectSection/PortfolioProjectSection'
+import FunText from 'src/components/organisms/FunText/FunText'
+import PuzzleIcon from '@heroicons/react/outline/PuzzleIcon'
+import { useStore } from './_app'
 
 export const getStaticProps: GetStaticProps = async () => ({
   props: { data: ['Karthick', 'Ragavendran'] }, // will be passed to the page component as props
@@ -37,6 +40,7 @@ const Home: NextPage = ({
   const [ikeaRef, gotoIkea] = useScrollTo()
   const [epicRef, gotoEpic] = useScrollTo()
   const [zillowRef, gotoZillow] = useScrollTo()
+  const [gameRef, gotoGame] = useScrollTo()
   const [voiceRef, gotoVoice] = useScrollTo()
   const [elegantUiRef, gotoElegantUi] = useScrollTo()
   const [robustArchRef, gotoRobustArch] = useScrollTo()
@@ -44,6 +48,7 @@ const Home: NextPage = ({
   useEffect(() => {
     dispatch(setCounterState(data))
   }, [data, dispatch])
+  const setHoverTargetType = useStore((state) => state.setHoverTargetType)
   return (
     <div>
       <Head>
@@ -104,10 +109,16 @@ const Home: NextPage = ({
 
       <main>
         <Container>
+          <div className='fixed bottom-0 right-0 p-2 '>
+            <button type='button' onClick={gotoGame}>
+              <PuzzleIcon className='w-6 h-6 text-black animate-pulse fill-primary' />
+            </button>
+          </div>
           <div ref={heroRef} className='z-40 -mt-16'>
             <Hero
               scrollToElegantUi={gotoElegantUi}
               scrollToRobustArch={gotoRobustArch}
+              scrollToGame={gotoGame}
             />
           </div>
 
@@ -430,17 +441,38 @@ const Home: NextPage = ({
             <div className='py-1' ref={ikeaRef} />
             <PortfolioProjectSection>
               <ProjectVideo videoId='uqXiXxlZKis' />
+
               <ProjectText
+                repository='https://github.com/karthickthankyou/ikea-clone'
+                intro={
+                  <>
+                    <div>
+                      This elegant clone of the IKEA store is simple and solid.
+                    </div>
+                    <div>
+                      This project is backed with sound technologies and it lets
+                      us move fast and healthy. I made the majority of this
+                      application in a couple of{' '}
+                      <a
+                        target='_blank'
+                        onMouseEnter={() => setHoverTargetType('LINK')}
+                        onMouseLeave={() => setHoverTargetType('DEFAULT')}
+                        className='underline'
+                        href='https://github.com/karthickthankyou/ikea-clone/commits/main'
+                        rel='noreferrer'
+                      >
+                        weeks
+                      </a>
+                      .{' '}
+                    </div>
+                  </>
+                }
                 title='IKEA Clone'
                 links={[
                   { text: 'ikea.iamkarthick.com', url: 'ikea.iamkarthick.com' },
                   {
                     text: 'story.ikea.iamkarthick.com',
                     url: 'story.ikea.iamkarthick.com',
-                  },
-                  {
-                    text: 'Github',
-                    url: 'https://github.com/karthickthankyou/ikea-clone',
                   },
                 ]}
                 techStack={[
@@ -475,8 +507,23 @@ const Home: NextPage = ({
             <div className='py-1' ref={zillowRef} />
             <PortfolioProjectSection>
               <ProjectText
+                intro={
+                  <>
+                    <div>
+                      This is a refactoring project. I tried to make the UI look
+                      cleaner while keeping the feel of zillow. I encourage you
+                      to compare the original zillow.com. feature-rich.
+                    </div>
+                    <div>
+                      My favorite part of this project is the composability. For
+                      instance the map component contains various layers for
+                      Homes, Cities, States and for UI.
+                    </div>
+                  </>
+                }
                 right={false}
                 title='Zillow Clone'
+                repository='https://github.com/karthickthankyou/zillow-clone-safe'
                 links={[
                   {
                     text: 'zillow.iamkarthick.com',
@@ -485,10 +532,6 @@ const Home: NextPage = ({
                   {
                     text: 'story.zillow.iamkarthick.com',
                     url: 'story.zillow.iamkarthick.com',
-                  },
-                  {
-                    text: 'Github',
-                    url: 'https://github.com/karthickthankyou/zillow-clone-safe',
                   },
                 ]}
                 techStack={[
@@ -529,7 +572,21 @@ const Home: NextPage = ({
             <PortfolioProjectSection>
               <ProjectVideo videoId='Yu39Iw937dI' />
               <ProjectText
+                repository='https://github.com/karthickthankyou/epicgames-clone-develop'
                 title='Epic Clone'
+                intro={
+                  <>
+                    <div>
+                      This ultra modern looking application is built with
+                      firestore (IKEA and Zillow have GraphQL with gql-codegen
+                      and they are much more scalable and robust).
+                    </div>
+                    <div>
+                      This application has a cool recommender system checkout
+                      the games pages and the corresponding similar items.
+                    </div>
+                  </>
+                }
                 links={[
                   {
                     text: 'epic.iamkarthick.com',
@@ -538,10 +595,6 @@ const Home: NextPage = ({
                   {
                     text: 'story.epic.iamkarthick.com',
                     url: 'story.epic.iamkarthick.com',
-                  },
-                  {
-                    text: 'Github',
-                    url: 'https://github.com/karthickthankyou/epicgames-clone-develop',
                   },
                 ]}
                 techStack={[
@@ -573,6 +626,9 @@ const Home: NextPage = ({
           <BannerPoints height='min-h-50vh' title='Voice'>
             <Motto />
           </BannerPoints>
+
+          <div className='py-2' ref={gameRef} />
+          <FunText />
         </Container>
       </main>
     </div>

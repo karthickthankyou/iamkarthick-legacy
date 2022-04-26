@@ -1,12 +1,14 @@
 import BlurredCirle from 'src/components/molecules/BlurredCirle/BlurredCirle'
 import OverlapSpace from 'src/components/molecules/OverlapSpace/OverlapSpace'
 import SlideIndicator from 'src/components/molecules/SlideIndicator'
+import PuzzleIcon from '@heroicons/react/outline/PuzzleIcon'
 import { useStore } from 'src/pages/_app'
 import Links from '../Links'
 
 export interface IHeroProps {
   scrollToElegantUi: () => void
   scrollToRobustArch: () => void
+  scrollToGame: () => void
 }
 
 const Ring = ({ className, radius }: { className: string; radius: number }) => (
@@ -48,7 +50,11 @@ const RingTL = ({
   </div>
 )
 
-const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
+const Hero = ({
+  scrollToElegantUi,
+  scrollToRobustArch,
+  scrollToGame,
+}: IHeroProps) => {
   const { show } = useStore((state) => state)
   const setHoverTargetType = useStore((state) => state.setHoverTargetType)
   return (
@@ -100,6 +106,7 @@ const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
       <OverlapSpace.Child className='flex items-end justify-center mb-3 -z-30'>
         <SlideIndicator direction='up' className='bottom-0 mt-auto left-1/2' />
       </OverlapSpace.Child>
+
       <OverlapSpace.Child className='-z-40'>
         <div className='fixed top-0 w-full h-full overflow-hidden translate-x-1/2 right-1/2 bg-gradient-to-r from-white to-gray-50 -z-40' />
       </OverlapSpace.Child>
