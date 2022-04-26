@@ -39,7 +39,7 @@
     "@reach/skip-nav": "^0.16.0",
     "@react-icons/all-files": "^4.1.0",
     "@reduxjs/toolkit": "^1.6.2",
-    "@sentry/nextjs": "^6.15.0",
+    "@sentry/nextjs": "^6.19.6",
     "@tailwindcss/line-clamp": "^0.3.1",
     "firebase": "^9.5.0",
     "framer-motion": "^6.2.10",
