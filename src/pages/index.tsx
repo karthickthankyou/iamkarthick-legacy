@@ -37,6 +37,7 @@ const Home: NextPage = ({
   const [ikeaRef, gotoIkea] = useScrollTo()
   const [epicRef, gotoEpic] = useScrollTo()
   const [zillowRef, gotoZillow] = useScrollTo()
+  const [voiceRef, gotoVoice] = useScrollTo()
   const [elegantUiRef, gotoElegantUi] = useScrollTo()
   const [robustArchRef, gotoRobustArch] = useScrollTo()
 
@@ -65,32 +66,38 @@ const Home: NextPage = ({
           <button
             type='button'
             aria-label='gotoHero'
-            className='w-3 h-3 p-2 transition-all bg-black border-2 border-black rounded-full hover:scale-150'
+            className='w-2 h-2 p-2 transition-all bg-black border-2 border-black rounded-full hover:scale-150'
             onClick={gotoHero}
           />
           <button
             type='button'
             aria-label='goto stack'
-            className='w-3 h-3 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
+            className='w-2 h-2 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
             onClick={gotoStack}
           />
           <button
             type='button'
             aria-label='goto ikea clone project'
-            className='w-3 h-3 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
+            className='w-2 h-2 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
             onClick={gotoIkea}
           />
           <button
             type='button'
             aria-label='goto epic clone project'
-            className='w-3 h-3 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
-            onClick={gotoEpic}
+            className='w-2 h-2 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
+            onClick={gotoZillow}
           />
           <button
             type='button'
             aria-label='goto zillow clone project'
-            className='w-3 h-3 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
-            onClick={gotoZillow}
+            className='w-2 h-2 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
+            onClick={gotoEpic}
+          />
+          <button
+            type='button'
+            aria-label='goto voice'
+            className='w-2 h-2 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
+            onClick={gotoVoice}
           />
         </div>
       </div>
@@ -357,7 +364,7 @@ const Home: NextPage = ({
             <div className='h-full overflow-x-scroll overscroll-x-none thin-scrollbar'>
               <div
                 className='gap-4 space-y-4 h-screen80'
-                style={{ columnWidth: '16rem' }}
+                style={{ columnWidth: '20rem' }}
               >
                 <SkillCard title='Core' type='title' />
                 <SkillCard title='Javascript' experience={4} />
@@ -419,6 +426,7 @@ const Home: NextPage = ({
           <div className='my-24' />
 
           <div className='space-y-36'>
+            <div ref={ikeaRef} />
             <PortfolioProjectSection>
               <ProjectVideo videoId='uqXiXxlZKis' />
               <ProjectText
@@ -463,6 +471,7 @@ const Home: NextPage = ({
                 ]}
               />
             </PortfolioProjectSection>
+            <div ref={zillowRef} />
             <PortfolioProjectSection>
               <ProjectText
                 right={false}
@@ -515,6 +524,7 @@ const Home: NextPage = ({
 
               <ProjectVideo videoId='lxXosGgMjl0' />
             </PortfolioProjectSection>
+            <div ref={epicRef} />
             <PortfolioProjectSection>
               <ProjectVideo videoId='Yu39Iw937dI' />
               <ProjectText
@@ -536,7 +546,6 @@ const Home: NextPage = ({
                 techStack={[
                   'ReactJS',
                   'Redux',
-                  'Storybook',
                   'Chromatic',
                   'Storybook',
                   'Tailwind',
@@ -559,6 +568,7 @@ const Home: NextPage = ({
             </PortfolioProjectSection>
           </div>
 
+          <div ref={voiceRef} />
           <BannerPoints height='min-h-50vh' title='Voice'>
             <Motto />
           </BannerPoints>

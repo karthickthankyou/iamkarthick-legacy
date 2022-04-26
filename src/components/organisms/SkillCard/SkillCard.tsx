@@ -30,7 +30,7 @@ const SkillCard = ({
           {title}
         </div>
         {experience && (
-          <div className='inline-block'>
+          <div className='flex-shrink-0 inline-block'>
             {experience} {experience === 1 ? 'year' : 'years'}
           </div>
         )}

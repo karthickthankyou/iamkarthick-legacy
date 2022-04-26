@@ -75,16 +75,6 @@ const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
           <div className='max-w-md mt-2 text-lg'>
             I create React applications with{' '}
             <button
-              type='button'
-              className='font-medium underline underline-offset-4 '
-              onClick={() => scrollToElegantUi()}
-              onMouseEnter={() => setHoverTargetType('LINK')}
-              onMouseLeave={() => setHoverTargetType('DEFAULT')}
-            >
-              <strong>elegant UI</strong>
-            </button>{' '}
-            and{' '}
-            <button
               className='font-medium underline underline-offset-4 '
               type='button'
               onClick={() => scrollToRobustArch()}
@@ -92,8 +82,18 @@ const Hero = ({ scrollToElegantUi, scrollToRobustArch }: IHeroProps) => {
               onMouseLeave={() => setHoverTargetType('DEFAULT')}
             >
               <strong>robust architecture</strong>
+            </button>{' '}
+            and{' '}
+            <button
+              type='button'
+              className='font-medium underline underline-offset-4 '
+              onClick={() => scrollToElegantUi()}
+              onMouseEnter={() => setHoverTargetType('LINK')}
+              onMouseLeave={() => setHoverTargetType('DEFAULT')}
+            >
+              <strong>elegant UI</strong>
             </button>
-            .
+            .{' '}
           </div>
         </div>
       </OverlapSpace.Child>

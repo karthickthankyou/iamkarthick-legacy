@@ -80,21 +80,21 @@ export const Motto = () => {
           <p>
             The students can be asked to pick them at any combination. For
             instance, a student might pick certifications that focus on{' '}
-            <div className='text-xs inline rounded border px-1 py-0.5'>
+            <span className='text-xs inline rounded border px-1 py-0.5'>
               Marketing
-            </div>{' '}
+            </span>{' '}
             +{' '}
-            <div className='text-xs inline rounded border px-1 py-0.5'>
+            <span className='text-xs inline rounded border px-1 py-0.5'>
               Biology
-            </div>{' '}
+            </span>{' '}
             +{' '}
-            <div className='text-xs inline rounded border px-1 py-0.5'>
+            <span className='text-xs inline rounded border px-1 py-0.5'>
               Computer Science
-            </div>{' '}
+            </span>{' '}
             +{' '}
-            <div className='text-xs inline rounded border px-1 py-0.5'>
+            <span className='text-xs inline rounded border px-1 py-0.5'>
               Literature
-            </div>{' '}
+            </span>{' '}
             and can become something amazing.
           </p>{' '}
           <p>

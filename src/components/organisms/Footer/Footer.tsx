@@ -4,7 +4,7 @@ import CoverLetter from '../CoverLetter/CoverLetter'
 export interface IFooterProps {}
 
 const Footer = () => (
-  <footer className='py-12 mt-12 text-white bg-black'>
+  <footer className='py-24 mt-12 text-white bg-black'>
     <Container>
       <CoverLetter />
     </Container>
