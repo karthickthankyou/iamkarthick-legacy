@@ -31,8 +31,8 @@ const Cursor = () => {
   const { hoverTargetType, show } = useStore((state) => state)
   const { offset, mixBlendCls } = getMidBlend(hoverTargetType)
 
-  const cursorX = useMotionValue(0)
-  const cursorY = useMotionValue(0)
+  const cursorX = useMotionValue(-100)
+  const cursorY = useMotionValue(-100)
 
   const springConfig = { damping: 10, stiffness: 50 }
   const cursorXSpring = useSpring(cursorX, springConfig)

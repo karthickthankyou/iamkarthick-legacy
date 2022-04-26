@@ -357,7 +357,7 @@ const Home: NextPage = ({
             <div className='h-full overflow-x-scroll overscroll-x-none thin-scrollbar'>
               <div
                 className='gap-4 space-y-4 h-screen80'
-                style={{ columnWidth: '24rem' }}
+                style={{ columnWidth: '16rem' }}
               >
                 <SkillCard title='Core' type='title' />
                 <SkillCard title='Javascript' experience={4} />
@@ -434,7 +434,33 @@ const Home: NextPage = ({
                     url: 'https://github.com/karthickthankyou/ikea-clone',
                   },
                 ]}
-                techStack={['hello', 'hello 2', 'hello 3', 'hello 4']}
+                techStack={[
+                  'ReactJS',
+                  'NextJS',
+                  'Redux',
+                  'RXJS',
+                  'GraphQL',
+                  'URQL',
+                  'GQL Codegen',
+                  'Storybook',
+                  'Chromatic',
+                  'Material UI',
+                  'Tailwind',
+                  'Typescript',
+                  'Eslint',
+                  'Prettier',
+                  'React hook form',
+                  'Yup',
+                  'Sentry',
+                  'Firebase',
+                  'Immer',
+                  'React Spring',
+                  'Testing library',
+                  'Cypress',
+                  'Husky',
+                  'Lint staged',
+                  'Commitlint',
+                ]}
               />
             </PortfolioProjectSection>
             <PortfolioProjectSection>
@@ -455,7 +481,36 @@ const Home: NextPage = ({
                     url: 'https://github.com/karthickthankyou/zillow-clone-safe',
                   },
                 ]}
-                techStack={['hello', 'hello 2', 'hello 3', 'hello 4']}
+                techStack={[
+                  'ReactJS',
+                  'NextJS',
+                  'Redux',
+                  'RXJS',
+                  'GraphQL',
+                  'URQL',
+                  'GQL Codegen',
+                  'Storybook',
+                  'Chromatic',
+                  'Material UI',
+                  'Tailwind',
+                  'Reach UI',
+                  'Typescript',
+                  'Eslint',
+                  'Prettier',
+                  'React hook form',
+                  'Yup',
+                  'Sentry',
+                  'Firebase',
+                  'Immer',
+                  'Mapbox',
+                  'MSW',
+                  'React Spring',
+                  'Testing library',
+                  'Cypress',
+                  'Husky',
+                  'Lint staged',
+                  'Commitlint',
+                ]}
               />
 
               <ProjectVideo videoId='lxXosGgMjl0' />
@@ -478,7 +533,28 @@ const Home: NextPage = ({
                     url: 'https://github.com/karthickthankyou/epicgames-clone-develop',
                   },
                 ]}
-                techStack={['hello', 'hello 2', 'hello 3', 'hello 4']}
+                techStack={[
+                  'ReactJS',
+                  'Redux',
+                  'Storybook',
+                  'Chromatic',
+                  'Storybook',
+                  'Tailwind',
+                  'Algolia',
+                  'React hook form',
+                  'Immer',
+                  'headlessui',
+                  'Firebase',
+                  'React helmet',
+                  'Typescript',
+                  'Eslint',
+                  'Prettier',
+                  'Testing library',
+                  'Cypress',
+                  'Husky',
+                  'Lint staged',
+                  'Commitlint',
+                ]}
               />
             </PortfolioProjectSection>
           </div>

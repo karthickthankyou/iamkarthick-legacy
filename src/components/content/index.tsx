@@ -25,107 +25,106 @@ export const Motto = () => {
             src='https://res.cloudinary.com/thankyou/image/upload/v1649821855/kids_ji04az.avif'
           />
           <p className='first-letter:text-4xl'>
-            Imagine a person having a magic rice bowl that can produce an
-            endless amount of food.
-          </p>
-          <p>Not just that.</p>
-          <p>
-            That person can send that bowl of rice to wherever and whomever they
-            want all over the world instantly.
+            If food can be digitally created and distributed online, Can we
+            solve world hunger? Absolutely. <strong>But will we?</strong>
           </p>
           <p>
-            That person worked hard to achieve that and now they have it, The
-            magic bowl.
+            Because we did not do that with education. Once created education
+            can be distributed almost free of cost. Still, there are paywalls
+            and entrance exams everywhere.
           </p>
           <p>
-            Can they instantly solve world hunger?<strong>Absolutely</strong>.
-          </p>
-          <p>
-            Instead, if they choose to make a fortune out of it selling each
-            instance of the freely spawned bowl of rice to only the ones that
-            can afford it is not fair.
-          </p>
-          <p>
-            The pandemic created a culture of online classes that do not make
-            sense to me. Through a digital medium, a teacher does not have to
-            perform it live to the students. He/She can prerecord and play it
-            with students and be available for their doubts.
+            The pandemic has introduced our children to a culture of online
+            classes that do not make sense to me. Through a digital medium, a
+            teacher does not have to perform it live to the students. He/She can
+            prerecord and play it with students and be available for their
+            doubts. But, does it have to come from the same teacher? The school
+            management can carefully record the topics once and reuse them for
+            years to come.
           </p>{' '}
           <p>
             But, does it have to come from the same teacher? The school
             management can carefully record the topics <strong>once</strong> and
-            reuse them for years to come. How much of the calculus has changed
-            in the past 5 or 10 years?
+            reuse them for years to come.
           </p>{' '}
           <p>
             Also, does every school need to record their classes? Should the
             quality of education change based on what money the students pay?
           </p>{' '}
           <p>
-            People are losing their minds to getting into prestigious
-            universities in the world. If IIT professors are the best educators
-            in India, they should be given the responsibility to create
-            educational content for the nation.
+            People are losing their minds about getting into prestigious
+            universities. If those professors are the best educators, they
+            should be given the responsibility to create educational content for
+            the nation for regional languages and the whole world in English.
           </p>{' '}
           <p>
             Why can’t the nation create courses of mathematics at a budget of
             100 crore rupees for all age groups, with different languages, with
             clear animations and explanations from the top minds of the nation,
-            and mandate that material for all schools <strong>uniformly</strong>
-            ?
+            and mandate that material for all schools{' '}
+            <strong className='italic text-primary'>uniformly?</strong>
           </p>{' '}
           <p>
             India has a huge youth resource. They all deserve IIT-level
-            education for free. Why? Because digital distribution is almost free
-            and becoming cheaper. Protecting education behind the walls only for
+            education for free. Protecting education behind the walls only for
             the selected few or hiding digital educational content only for the
-            subscribers is selfish.
+            subscribers should become immoral.
+          </p>{' '}
+          <div className='text-xl font-bold '>Rethinking education</div>
+          <p>
+            We can question the existing style of prepackaged degrees. The
+            government can design like 500 certifications (like the 12 AWS
+            certifications) categorized by age level for every subject along
+            with their world-class study material.
           </p>{' '}
           <p>
-            The prepackaged degrees do not make sense too. The government can
-            design like 500 certifications (like the 12 AWS certifications)
-            categorized by age level for every subject along with their
-            world-class study material.
-          </p>{' '}
-          <p>
-            The students must be asked to pick them at any combination. For
-            instance, a student might pick certifications that focus on
-            Marketing + Biology + Computer Science + Literature and can become
-            something amazing.
+            The students can be asked to pick them at any combination. For
+            instance, a student might pick certifications that focus on{' '}
+            <div className='text-xs inline rounded border px-1 py-0.5'>
+              Marketing
+            </div>{' '}
+            +{' '}
+            <div className='text-xs inline rounded border px-1 py-0.5'>
+              Biology
+            </div>{' '}
+            +{' '}
+            <div className='text-xs inline rounded border px-1 py-0.5'>
+              Computer Science
+            </div>{' '}
+            +{' '}
+            <div className='text-xs inline rounded border px-1 py-0.5'>
+              Literature
+            </div>{' '}
+            and can become something amazing.
           </p>{' '}
           <p>
             The 9–4 routine nature of educational institutions is tiresome too.
             When will the students have their time and explore?
           </p>{' '}
           <p>
-            Every day millions of teachers repeating the same subject throughout
-            the nation is completely pointless. It is like using a pigeon for
-            communication instead of using a mobile phone.
-          </p>{' '}
-          <p>So, we don&apos;t need schools?</p>
-          <p>
-            We need extensive laboratories for everyone to enroll, a highly
-            validated exam procedure and exam halls to conduct them.{' '}
+            We need extensive laboratories for everyone to enroll in, a highly
+            validated exam procedure, and exam halls to conduct them.{' '}
             <em>
-              Study whatever and whenever you want. Book a slot and take those
+              Study whatever and whenever you want. Book a slot, take those
               exams and pass.
             </em>
           </p>{' '}
+          <div className='text-xl font-bold '>What is stopping us now?</div>
           <p>
-            It used to be a time where the seats in prestigious institutes were
-            limited. A classroom can only hold a certain number of people. And
-            we had to discriminate against the poor, the unfortunates, and
-            whoever failed the entrance exams.
+            There used to be a time when the seats in prestigious institutes
+            were limited. A physical classroom can only hold a certain number of
+            people. And we had to stop the poor, the unfortunates, and whoever
+            chose to live a little and hence failed the entrance exams from
+            getting a quality education.
           </p>{' '}
-          <p>What is stopping us now?</p>
-          <p>Why are there still entrance exams and limited admissions?</p>
-          <p>Let the whole nation learn the same material.</p>
+          <p>The Internet has broken all those barriers.</p>
           <p>
-            Let the whole nation take the exams and prove their abilities.
-          </p>{' '}
+            But still, our children are stuck behind the invisible barriers that
+            the adults chose to keep.
+          </p>
           <p>
-            In this internet era, Everyone deserves world-class education for
-            free. Because, it is possible!
+            Using technology, We have to work towards removing those barriers
+            and make knowledge accessible to everyone.
           </p>
         </div>
       </div>
