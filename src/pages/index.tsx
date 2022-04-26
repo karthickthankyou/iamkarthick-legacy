@@ -9,18 +9,16 @@ import Hero from 'src/components/organisms/Hero'
 import SkillCard from 'src/components/organisms/SkillCard'
 import Container from 'src/components/atoms/Container/Container'
 
-import ProductCard from 'src/components/organisms/ProductCard/ProductCard'
-import TechBadge from 'src/components/atoms/TechBadge/TechBadge'
 import { useScrollTo } from 'src/hooks'
 import BannerPoints from 'src/components/organisms/BannerPoints'
-import {
-  BulletPoint,
-  Point,
-} from 'src/components/organisms/BannerPoints/BannerPoints'
+import { Point } from 'src/components/organisms/BannerPoints/BannerPoints'
 import SlideIndicator from 'src/components/molecules/SlideIndicator'
 import { Motto } from 'src/components/content'
 import ExternalLink from 'src/components/atoms/ExternalLink/ExternalLink'
-import Links from 'src/components/organisms/Links/Links'
+import PortfolioProjectSection, {
+  ProjectVideo,
+  ProjectText,
+} from 'src/components/organisms/PortfolioProjectSection/PortfolioProjectSection'
 
 export const getStaticProps: GetStaticProps = async () => ({
   props: { data: ['Karthick', 'Ragavendran'] }, // will be passed to the page component as props
@@ -107,85 +105,6 @@ const Home: NextPage = ({
           </div>
 
           <BannerPoints
-            title='Elegant UI'
-            description='Recipe for elegant UI.'
-            ref={elegantUiRef}
-          >
-            <div className='mt-4 overflow-x-scroll overscroll-x-none thin-scrollbar first-letter:text-4xl'>
-              <div
-                className='gap-8 pb-12 space-y-4 text-lg h-screen60'
-                style={{ columnWidth: '16rem', columnFill: 'auto' }}
-              >
-                <Point title='Design system'>
-                  <div>
-                    The design system reduces the decision fatigue that affects
-                    the quality of the decisions and improves consistency and
-                    developer experience.
-                  </div>
-                  <div className='mt-3 '>
-                    <ExternalLink href='https://javascript.plainenglish.io/design-systems-why-aedbacf9d578'>
-                      Why should you have a design system for your product?
-                    </ExternalLink>
-                    <ExternalLink href='https://karthickragavendran.medium.com/design-system-foundations-using-tailwind-abb1af1acabb'>
-                      Design system foundations using tailwind.
-                    </ExternalLink>
-                    <ExternalLink href='https://karthickragavendran.medium.com/design-system-components-using-tailwind-42f2fdb3a56'>
-                      Design system components using tailwind.
-                    </ExternalLink>
-                  </div>
-                </Point>
-
-                <Point title='Isolated component development & testing'>
-                  <p>
-                    React is data-driven and hence each frame/snapshot in the
-                    application's runtime can be reproduced with the right data.
-                  </p>
-                  <p>
-                    Any component can go through a variety of states in an
-                    application's runtime. Having a detailed catalog of all
-                    components with all those possible states provides great
-                    confidence.
-                  </p>
-                </Point>
-                <Point title='Composition'>
-                  <p>
-                    Often flexibility and complexity grow together. When we want
-                    a component to be adapted to numerous scenarios we may end
-                    up making the component unwieldy.
-                  </p>
-                  <p>
-                    The concept of children prop in react helps us drastically
-                    reduce the complexity while increasing flexibility.
-                  </p>
-                </Point>
-                <Point title='Atomic design'>
-                  We discussed isolated component development with composition.
-                  The methodology of atomic design helps us organize the
-                  components hierarchically. That increases reusability and
-                  consistency.
-                </Point>
-                <Point title='Styling abstraction using components'>
-                  <p>
-                    The priority scheme to determine the right style rule based
-                    on a brilliant game of specificity quickly became a
-                    nightmare as the applications grew larger. Huge applications
-                    needed grandmasters of CSS to modify something.
-                  </p>
-                  <p>
-                    CSS modules, Styled components, and utility first CSS
-                    localizes the styles to the component level and hence allows
-                    the UI developers to almost skip the game of specificity and
-                    develop UI's instead.
-                  </p>
-                </Point>
-                <Point title='UX foundations'>
-                  Being aware and following the simple laws of UX allows us to
-                  produce good UI quickly.
-                </Point>
-              </div>
-            </div>
-          </BannerPoints>
-          <BannerPoints
             title='Robust architecture'
             description='Recipe for robust architecture.'
             ref={robustArchRef}
@@ -197,8 +116,8 @@ const Home: NextPage = ({
               >
                 <Point title='Functional programming'>
                   <p>
-                    Debugging takes the most time out of the software engineers'
-                    life.
+                    Debugging takes the most time out of the software
+                    engineers&apos; life.
                   </p>
                   <p>
                     The biggest culprit of software debugging is figuring out
@@ -265,9 +184,9 @@ const Home: NextPage = ({
                   <p>A well-typed project enables reckless refactoring.</p>
                   <p>
                     Like a good automation tool, typescript language takes away
-                    a lot of cognitive load from the developers' minds. Although
-                    it has a decent learning curve, the outcome makes typescript
-                    a must-have.
+                    a lot of cognitive load from the developers&apos; minds.
+                    Although it has a decent learning curve, the outcome makes
+                    typescript a must-have.
                   </p>
                   <ExternalLink href='https://karthickragavendran.medium.com/typescript-why-866281eaebf8'>
                     Typescript. Why?
@@ -347,6 +266,87 @@ const Home: NextPage = ({
             </div>
           </BannerPoints>
 
+          <BannerPoints
+            title='Elegant UI'
+            description='Recipe for elegant UI.'
+            ref={elegantUiRef}
+          >
+            <div className='mt-4 overflow-x-scroll overscroll-x-none thin-scrollbar first-letter:text-4xl'>
+              <div
+                className='gap-8 pb-12 space-y-4 text-lg h-screen60'
+                style={{ columnWidth: '16rem', columnFill: 'auto' }}
+              >
+                <Point title='Design system'>
+                  <div>
+                    The design system reduces the decision fatigue that affects
+                    the quality of the decisions and improves consistency and
+                    developer experience.
+                  </div>
+                  <div className='mt-3 '>
+                    <ExternalLink href='https://javascript.plainenglish.io/design-systems-why-aedbacf9d578'>
+                      Why should you have a design system for your product?
+                    </ExternalLink>
+                    <ExternalLink href='https://karthickragavendran.medium.com/design-system-foundations-using-tailwind-abb1af1acabb'>
+                      Design system foundations using tailwind.
+                    </ExternalLink>
+                    <ExternalLink href='https://karthickragavendran.medium.com/design-system-components-using-tailwind-42f2fdb3a56'>
+                      Design system components using tailwind.
+                    </ExternalLink>
+                  </div>
+                </Point>
+
+                <Point title='Isolated component development & testing'>
+                  <p>
+                    React is data-driven and hence each frame/snapshot in the
+                    application&apos;s runtime can be reproduced with the right
+                    data.
+                  </p>
+                  <p>
+                    Any component can go through a variety of states in an
+                    application&apos;s runtime. Having a detailed catalog of all
+                    components with all those possible states provides great
+                    confidence.
+                  </p>
+                </Point>
+                <Point title='Composition'>
+                  <p>
+                    Often flexibility and complexity grow together. When we want
+                    a component to be adapted to numerous scenarios we may end
+                    up making the component unwieldy.
+                  </p>
+                  <p>
+                    The concept of children prop in react helps us drastically
+                    reduce the complexity while increasing flexibility.
+                  </p>
+                </Point>
+                <Point title='Atomic design'>
+                  We discussed isolated component development with composition.
+                  The methodology of atomic design helps us organize the
+                  components hierarchically. That increases reusability and
+                  consistency.
+                </Point>
+                <Point title='Styling abstraction using components'>
+                  <p>
+                    The priority scheme to determine the right style rule based
+                    on a brilliant game of specificity quickly became a
+                    nightmare as the applications grew larger. Huge applications
+                    needed grandmasters of CSS to modify something.
+                  </p>
+                  <p>
+                    CSS modules, Styled components, and utility first CSS
+                    localizes the styles to the component level and hence allows
+                    the UI developers to almost skip the game of specificity and
+                    develop UI&apos;s instead.
+                  </p>
+                </Point>
+                <Point title='UX foundations'>
+                  Being aware and following the simple laws of UX allows us to
+                  produce good UI quickly.
+                </Point>
+              </div>
+            </div>
+          </BannerPoints>
+
           <div className='group' ref={stackRef}>
             <div className='tracking-widest uppercase transition-all translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 text-primary'>
               Basic Skills
@@ -418,64 +418,71 @@ const Home: NextPage = ({
 
           <div className='my-24' />
 
-          <ProductCard
-            ref={ikeaRef}
-            title='IKEA clone'
-            src='https://res.cloudinary.com/thankyou/image/upload/v1649069402/iamkarthick/ikea-home_uvdzib.png'
-          >
-            <div className='flex flex-col'>
-              <a href='//ikea.iamkarthick.com' target='_blank' rel='noreferrer'>
-                ikea.iamkarthick.com
-              </a>
-              <a
-                href='//story.ikea.iamkarthick.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                story.ikea.iamkarthick.com
-              </a>
-            </div>
-            <div className='flex flex-wrap gap-3' ref={ikeaRef}>
-              <TechBadge text='React' />
-              <TechBadge text='Redux' />
-              <TechBadge text='Cypress' />
-              <TechBadge text='React' />
-              <TechBadge text='Redux' />
-              <TechBadge text='Cypress' />
-              <TechBadge text='React' />
-              <TechBadge text='Redux' />
-              <TechBadge text='Cypress' />
-            </div>
-          </ProductCard>
-          <ProductCard
-            ref={epicRef}
-            title='Epic games clone'
-            src='https://res.cloudinary.com/thankyou/image/upload/v1649069746/iamkarthick/Screenshot_2022-04-04_at_4.25.27_PM_w1vwxm.png'
-          >
-            <div className='grid grid-cols-3'>
-              <TechBadge text='React' />
-              <TechBadge text='Redux' />
-              <TechBadge text='Cypress' />
-            </div>
-          </ProductCard>
+          <div className='space-y-36'>
+            <PortfolioProjectSection>
+              <ProjectVideo videoId='uqXiXxlZKis' />
+              <ProjectText
+                title='IKEA Clone'
+                links={[
+                  { text: 'ikea.iamkarthick.com', url: 'ikea.iamkarthick.com' },
+                  {
+                    text: 'story.ikea.iamkarthick.com',
+                    url: 'story.ikea.iamkarthick.com',
+                  },
+                  {
+                    text: 'Github',
+                    url: 'https://github.com/karthickthankyou/ikea-clone',
+                  },
+                ]}
+                techStack={['hello', 'hello 2', 'hello 3', 'hello 4']}
+              />
+            </PortfolioProjectSection>
+            <PortfolioProjectSection>
+              <ProjectText
+                right={false}
+                title='Zillow Clone'
+                links={[
+                  {
+                    text: 'zillow.iamkarthick.com',
+                    url: 'zillow.iamkarthick.com',
+                  },
+                  {
+                    text: 'story.zillow.iamkarthick.com',
+                    url: 'story.zillow.iamkarthick.com',
+                  },
+                  {
+                    text: 'Github',
+                    url: 'https://github.com/karthickthankyou/zillow-clone-safe',
+                  },
+                ]}
+                techStack={['hello', 'hello 2', 'hello 3', 'hello 4']}
+              />
 
-          <ProductCard
-            title='Zillow clone'
-            src='https://res.cloudinary.com/thankyou/image/upload/v1649069803/iamkarthick/Screenshot_2022-04-04_at_4.26.30_PM_hsuutr.png'
-          >
-            <div className='grid grid-cols-3'>
-              <TechBadge text='React' />
-              <TechBadge text='Redux' />
-              <TechBadge text='Cypress' />
-            </div>
-          </ProductCard>
-          <BannerPoints title='Special skills' description='About myself'>
-            <BulletPoint description='I can create UI at the speed of writing.' />
-            <BulletPoint description='Even if I am completely bored about something, I can start focusing and get things done.' />
-            <BulletPoint description='Learning more makes learning easier. I am interesting in taking any challenging tasks involving fields. I am interested in data science and ML.' />
-            <BulletPoint description='I can squeeze in last bit of performance.' />
-            <BulletPoint description='I am interested in web scraping.' />
-          </BannerPoints>
+              <ProjectVideo videoId='lxXosGgMjl0' />
+            </PortfolioProjectSection>
+            <PortfolioProjectSection>
+              <ProjectVideo videoId='Yu39Iw937dI' />
+              <ProjectText
+                title='Epic Clone'
+                links={[
+                  {
+                    text: 'epic.iamkarthick.com',
+                    url: 'epic.iamkarthick.com',
+                  },
+                  {
+                    text: 'story.epic.iamkarthick.com',
+                    url: 'story.epic.iamkarthick.com',
+                  },
+                  {
+                    text: 'Github',
+                    url: 'https://github.com/karthickthankyou/epicgames-clone-develop',
+                  },
+                ]}
+                techStack={['hello', 'hello 2', 'hello 3', 'hello 4']}
+              />
+            </PortfolioProjectSection>
+          </div>
+
           <BannerPoints height='min-h-50vh' title='Voice'>
             <Motto />
           </BannerPoints>

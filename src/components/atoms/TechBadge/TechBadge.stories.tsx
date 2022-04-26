@@ -7,7 +7,9 @@ export default {
   component: TechBadge,
 } as ComponentMeta<typeof TechBadge>
 
-const Template: ComponentStory<typeof TechBadge> = (args) => <TechBadge {...args} />
+const Template: ComponentStory<typeof TechBadge> = (args) => (
+  <TechBadge {...args} />
+)
 
 export const Primary = Template.bind({})
 Primary.args = {}

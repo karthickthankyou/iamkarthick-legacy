@@ -9,8 +9,10 @@ import create from 'zustand'
 import '../globals.css'
 
 // note the "<MyStore>" next to create
-export type HoverTargetType = 'DEFAULT' | 'LINK' | 'IMAGE'
+export type HoverTargetType = 'DEFAULT' | 'LINK' | 'IMAGE' | 'VIDEO'
 type MyStore = {
+  muted: boolean
+  toggleMuted: () => void
   show: boolean
   toggleShow: () => void
   hoverTargetType: HoverTargetType
@@ -18,6 +20,8 @@ type MyStore = {
 }
 
 export const useStore = create<MyStore>((set) => ({
+  muted: true,
+  toggleMuted: () => set((state) => ({ ...state, muted: !state.muted })),
   show: true,
   toggleShow: () => set((state) => ({ ...state, show: !state.show })),
   hoverTargetType: 'DEFAULT',

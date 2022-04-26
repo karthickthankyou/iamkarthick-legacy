@@ -7,7 +7,7 @@ describe('Layout Component', () => {
     mount(
       <Layout>
         <div>Hello</div>
-      </Layout>
+      </Layout>,
     )
   })
 })

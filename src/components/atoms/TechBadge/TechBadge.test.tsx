@@ -3,6 +3,6 @@ import TechBadge from './TechBadge'
 
 describe('TechBadge Component', () => {
   it('TechBadge renders', () => {
-    mount(<TechBadge />)
+    mount(<TechBadge text='Sample' />)
   })
 })

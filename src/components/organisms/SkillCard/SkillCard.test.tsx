@@ -3,6 +3,6 @@ import SkillCard from './SkillCard'
 
 describe('SkillCard Component', () => {
   it('SkillCard renders', () => {
-    mount(<SkillCard />)
+    mount(<SkillCard title='Title' />)
   })
 })

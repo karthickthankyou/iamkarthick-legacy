@@ -1,4 +1,3 @@
-import HR from 'src/components/molecules/HR/HR'
 import { Children } from 'src/types'
 
 export interface ISkillCardProps {

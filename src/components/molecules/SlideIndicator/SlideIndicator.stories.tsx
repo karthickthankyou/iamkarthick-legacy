@@ -7,7 +7,9 @@ export default {
   component: SlideIndicator,
 } as ComponentMeta<typeof SlideIndicator>
 
-const Template: ComponentStory<typeof SlideIndicator> = (args) => <SlideIndicator {...args} />
+const Template: ComponentStory<typeof SlideIndicator> = (args) => (
+  <SlideIndicator {...args} />
+)
 
 export const Primary = Template.bind({})
 Primary.args = {}

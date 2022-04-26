@@ -7,7 +7,9 @@ export default {
   component: SkillCard,
 } as ComponentMeta<typeof SkillCard>
 
-const Template: ComponentStory<typeof SkillCard> = (args) => <SkillCard {...args} />
+const Template: ComponentStory<typeof SkillCard> = (args) => (
+  <SkillCard {...args} />
+)
 
 export const Primary = Template.bind({})
 Primary.args = {}

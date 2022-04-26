@@ -7,7 +7,9 @@ export default {
   component: BannerPoints,
 } as ComponentMeta<typeof BannerPoints>
 
-const Template: ComponentStory<typeof BannerPoints> = (args) => <BannerPoints {...args} />
+const Template: ComponentStory<typeof BannerPoints> = (args) => (
+  <BannerPoints {...args} />
+)
 
 export const Primary = Template.bind({})
 Primary.args = {}

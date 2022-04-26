@@ -3,6 +3,6 @@ import ExternalLink from './ExternalLink'
 
 describe('ExternalLink Component', () => {
   it('ExternalLink renders', () => {
-    mount(<ExternalLink />)
+    mount(<ExternalLink href='/'>Hello</ExternalLink>)
   })
 })

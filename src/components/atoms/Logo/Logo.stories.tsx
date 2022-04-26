@@ -7,7 +7,7 @@ export default {
   component: Logo,
 } as ComponentMeta<typeof Logo>
 
-const Template: ComponentStory<typeof Logo> = (args) => <Logo {...args} />
+const Template: ComponentStory<typeof Logo> = () => <Logo />
 
 export const Primary = Template.bind({})
 Primary.args = {}

@@ -7,7 +7,7 @@ export default {
   component: Links,
 } as ComponentMeta<typeof Links>
 
-const Template: ComponentStory<typeof Links> = (args) => <Links {...args} />
+const Template: ComponentStory<typeof Links> = () => <Links />
 
 export const Primary = Template.bind({})
 Primary.args = {}

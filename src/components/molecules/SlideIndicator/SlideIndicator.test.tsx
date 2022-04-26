@@ -3,6 +3,6 @@ import SlideIndicator from './SlideIndicator'
 
 describe('SlideIndicator Component', () => {
   it('SlideIndicator renders', () => {
-    mount(<SlideIndicator />)
+    mount(<SlideIndicator direction='down' />)
   })
 })

@@ -1,6 +1,7 @@
 import React from 'react'
 import StarIcon from '@heroicons/react/solid/StarIcon'
 import { Children } from 'src/types'
+import SlideIndicator from 'src/components/molecules/SlideIndicator/SlideIndicator'
 
 export interface IBannerPointsProps {
   title: string
@@ -37,6 +38,9 @@ const BannerPoints = React.forwardRef<HTMLDivElement, IBannerPointsProps>(
       </div>
       <div className='text-xl'>{description}</div>
       {children}
+      <div className='flex justify-end'>
+        <SlideIndicator direction='left' />
+      </div>
     </div>
   ),
 )

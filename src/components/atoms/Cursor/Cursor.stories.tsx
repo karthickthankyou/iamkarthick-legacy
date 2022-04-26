@@ -7,7 +7,7 @@ export default {
   component: Cursor,
 } as ComponentMeta<typeof Cursor>
 
-const Template: ComponentStory<typeof Cursor> = (args) => <Cursor {...args} />
+const Template: ComponentStory<typeof Cursor> = () => <Cursor />
 
 export const Primary = Template.bind({})
 Primary.args = {}

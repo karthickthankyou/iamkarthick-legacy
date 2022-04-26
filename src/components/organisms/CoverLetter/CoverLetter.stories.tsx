@@ -7,7 +7,7 @@ export default {
   component: CoverLetter,
 } as ComponentMeta<typeof CoverLetter>
 
-const Template: ComponentStory<typeof CoverLetter> = (args) => <CoverLetter {...args} />
+const Template: ComponentStory<typeof CoverLetter> = () => <CoverLetter />
 
 export const Primary = Template.bind({})
 Primary.args = {}

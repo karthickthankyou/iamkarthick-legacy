@@ -7,7 +7,9 @@ export default {
   component: PortfolioBanner,
 } as ComponentMeta<typeof PortfolioBanner>
 
-const Template: ComponentStory<typeof PortfolioBanner> = (args) => <PortfolioBanner {...args} />
+const Template: ComponentStory<typeof PortfolioBanner> = () => (
+  <PortfolioBanner />
+)
 
 export const Primary = Template.bind({})
 Primary.args = {}

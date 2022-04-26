@@ -7,7 +7,9 @@ export default {
   component: Hero,
 } as ComponentMeta<typeof Hero>
 
-const Template: ComponentStory<typeof Hero> = () => <Hero />
+const Template: ComponentStory<typeof Hero> = () => (
+  <Hero scrollToRobustArch={() => {}} scrollToElegantUi={() => {}} />
+)
 
 export const Primary = Template.bind({})
 Primary.args = {}

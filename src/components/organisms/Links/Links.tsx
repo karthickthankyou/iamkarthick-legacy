@@ -3,6 +3,7 @@ import { SiLinkedin } from '@react-icons/all-files/si/SiLinkedin'
 import { SiMedium } from '@react-icons/all-files/si/SiMedium'
 import { SiSoundcloud } from '@react-icons/all-files/si/SiSoundcloud'
 import { SiTwitter } from '@react-icons/all-files/si/SiTwitter'
+import { SiNpm } from '@react-icons/all-files/si/SiNpm'
 import { SiYoutube } from '@react-icons/all-files/si/SiYoutube'
 import { FaMusic } from '@react-icons/all-files/fa/FaMusic'
 import { SiDribbble } from '@react-icons/all-files/si/SiDribbble'
@@ -42,6 +43,7 @@ const Links = () => (
       Icon={SiYoutube}
       href='https://www.youtube.com/channel/UC82M9uZCd7c7mM7-WEaWJlA'
     />
+    <OneLink Icon={SiNpm} href='https://www.npmjs.com/~iamkarthick' />
     <OneLink
       Icon={SiLinkedin}
       href='https://www.linkedin.com/in/iamkarthickr/'
