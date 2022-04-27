@@ -133,12 +133,13 @@ const FunText = () => {
       </Dialog>
 
       <div className='text-3xl font-bold text-primary '>
-        Bored? <span className='text-lg'>Lets play a game.</span>{' '}
+        Hello world challenge!{' '}
       </div>
       <div className='max-w-md mt-4 text-2xl font-light'>
         Can you type <span className='font-bold'>{target}</span> when the
-        characters <span className='font-bold'>{disturbance}</span> keeps
-        repeating every <span className='font-bold'>{duration}</span> ms?
+        character{disturbance.length > 1 && 's'}{' '}
+        <span className='font-bold'>{disturbance}</span> keeps repeating every{' '}
+        <span className='font-bold'>{duration}</span> ms?
       </div>
       {matchedIndex && (
         <div className='mt-6 text-2xl animate-bounce'>Yay. You won! 🎉</div>
