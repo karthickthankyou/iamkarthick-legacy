@@ -484,6 +484,7 @@ const Home: NextPage = ({
                   'Redux',
                   'RXJS',
                   'GraphQL',
+                  'Postgres',
                   'URQL',
                   'GQL Codegen',
                   'Storybook',
@@ -543,6 +544,7 @@ const Home: NextPage = ({
                   'Redux',
                   'RXJS',
                   'GraphQL',
+                  'Postgres',
                   'URQL',
                   'GQL Codegen',
                   'Storybook',
@@ -630,7 +632,7 @@ const Home: NextPage = ({
             <Motto />
           </BannerPoints>
 
-          <div className='py-2' ref={gameRef} />
+          <div className='py-2' id='helloworldchallenge' ref={gameRef} />
           <FunText />
         </Container>
       </main>
