@@ -36,7 +36,7 @@ export const OneLink = ({ Icon, href }: IOneLinkProps) => {
 }
 
 const Links = () => (
-  <div className='flex gap-3 mt-3'>
+  <div className='flex flex-wrap gap-3 mt-3'>
     <OneLink Icon={SiGithub} href='https://github.com/karthickthankyou' />
     <OneLink Icon={SiMedium} href='https://medium.com/@karthickragavendran' />
     <OneLink

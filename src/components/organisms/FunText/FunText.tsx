@@ -21,7 +21,7 @@ const targetWords = [
 const FunText = () => {
   const [open, setopen] = useState(false)
   const [text, settext] = useState('')
-  const [target, settarget] = useState('hello')
+  const [target, settarget] = useState('hello world')
   const [duration, setduration] = useState(1000)
   const [disturbance, setdisturbance] = useState('o')
   const [matchedIndex, setindex] = useState<number | null>(null)

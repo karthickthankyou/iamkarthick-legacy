@@ -469,10 +469,13 @@ const Home: NextPage = ({
                 }
                 title='IKEA Clone'
                 links={[
-                  { text: 'ikea.iamkarthick.com', url: 'ikea.iamkarthick.com' },
+                  {
+                    text: 'ikea.iamkarthick.com',
+                    url: 'https://ikea.iamkarthick.com',
+                  },
                   {
                     text: 'story.ikea.iamkarthick.com',
-                    url: 'story.ikea.iamkarthick.com',
+                    url: 'https://story.ikea.iamkarthick.com',
                   },
                 ]}
                 techStack={[
@@ -527,11 +530,11 @@ const Home: NextPage = ({
                 links={[
                   {
                     text: 'zillow.iamkarthick.com',
-                    url: 'zillow.iamkarthick.com',
+                    url: 'https://zillow.iamkarthick.com',
                   },
                   {
                     text: 'story.zillow.iamkarthick.com',
-                    url: 'story.zillow.iamkarthick.com',
+                    url: 'https://story.zillow.iamkarthick.com',
                   },
                 ]}
                 techStack={[
@@ -590,11 +593,11 @@ const Home: NextPage = ({
                 links={[
                   {
                     text: 'epic.iamkarthick.com',
-                    url: 'epic.iamkarthick.com',
+                    url: 'https://epic.iamkarthick.com',
                   },
                   {
                     text: 'story.epic.iamkarthick.com',
-                    url: 'story.epic.iamkarthick.com',
+                    url: 'https://story.epic.iamkarthick.com',
                   },
                 ]}
                 techStack={[

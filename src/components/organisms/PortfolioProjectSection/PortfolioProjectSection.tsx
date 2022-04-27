@@ -90,7 +90,9 @@ export const ProjectText = ({
             onMouseEnter={() => setHoverTargetType('LINK')}
             onMouseLeave={() => setHoverTargetType('DEFAULT')}
             className='mt-8'
+            target='_blank'
             href={repository}
+            rel='noreferrer'
           >
             Go to code
           </a>
