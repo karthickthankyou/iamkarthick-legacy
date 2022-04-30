@@ -41,7 +41,7 @@ const Home: NextPage = ({
   const [epicRef, gotoEpic] = useScrollTo()
   const [zillowRef, gotoZillow] = useScrollTo()
   const [gameRef, gotoGame] = useScrollTo()
-  const [voiceRef, gotoVoice] = useScrollTo()
+
   const [elegantUiRef, gotoElegantUi] = useScrollTo()
   const [robustArchRef, gotoRobustArch] = useScrollTo()
 
@@ -97,12 +97,6 @@ const Home: NextPage = ({
             aria-label='goto zillow clone project'
             className='w-2 h-2 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
             onClick={gotoEpic}
-          />
-          <button
-            type='button'
-            aria-label='goto voice'
-            className='w-2 h-2 p-2 transition-all bg-white border-2 border-black rounded-full hover:scale-150'
-            onClick={gotoVoice}
           />
         </div>
       </div>
@@ -626,11 +620,6 @@ const Home: NextPage = ({
               />
             </PortfolioProjectSection>
           </div>
-
-          <div ref={voiceRef} />
-          <BannerPoints height='min-h-50vh' title='Voice'>
-            <Motto />
-          </BannerPoints>
 
           <div className='py-2' id='helloworldchallenge' ref={gameRef} />
           <FunText />
